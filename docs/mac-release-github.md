@@ -74,6 +74,7 @@ required reviewer. Store the secrets there and add `environment: release` to the
 |---|---|
 | `MAC verification failed` while importing the certificate | `APPLE_CERTIFICATE_PASSWORD` is wrong |
 | Ad-hoc signature, or "no identity found" | The .p12 was exported without its private key (step 1.2) |
+| `failed to notarize app: Error: invalidPEMDocument` | The `.p8` secret is mangled (pasted without newlines or `BEGIN`/`END` lines). The workflow now repairs common cases; if it still fails, re-set it from the file: `gh secret set APPLE_API_KEY_P8 < AuthKey_<KEYID>.p8` |
 | notarytool `401` / invalid credentials | Issuer ID and Key ID are swapped, or the `.p8` secret is missing its `BEGIN`/`END` lines |
 | Notarization status `Invalid` | `xcrun notarytool log <submission-id> --key AuthKey.p8 --key-id … --issuer …` names the rejected file |
 | `Tag vX does not match version Y` | Fix the version, then delete and re-push the tag |
