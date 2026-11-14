@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Clipiccolo</title>
+  <rect x="64" y="64" width="896" height="896" rx="208" fill="#2A1F18"/>
+  <circle cx="405" cy="524" r="196" fill="#F6EFE3"/>
+  <path fill="#2A1F18" d="M356.0 592.0L356.0 456.0A15 15 0 0 1 378.8 443.2L490.8 511.2A15 15 0 0 1 490.8 536.8L378.8 604.8A15 15 0 0 1 356.0 592.0Z"/>
+  <circle cx="735" cy="640" r="80" fill="#8DB443"/>
+</svg>

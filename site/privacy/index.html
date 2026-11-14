@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy · Clipiccolo</title>
+<meta name="description" content="What Clipiccolo does with your videos, your clipboard and your disk: nothing leaves your computer unless you paste a link.">
+<meta name="theme-color" content="#F3EDE2">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clipiccolo privacy notes">
+<meta property="og:description" content="No account, no upload, no analytics. What Clipiccolo reads, writes and downloads, file by file.">
+<meta property="og:image" content="/og.png">
+<link rel="preload" href="../fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="../index.html" aria-label="Clipiccolo, home">
+      <img class="tile" src="../icon.svg" alt="" width="26" height="26">
+      <img class="wm" src="../wordmark.svg" alt="" width="85" height="19">
+    </a>
+    <nav class="stops" aria-label="Sections">
+      <a href="../index.html#how">How it works</a>
+      <a href="../index.html#quality">Quality</a>
+      <a href="index.html" aria-current="page">Privacy</a>
+      <a href="../index.html#faq">FAQ</a>
+    </nav>
+    <div class="right">
+      <a class="ghost" href="https://github.com/hubertmk/clipiccolo" aria-label="Clipiccolo on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.3 9.6 7.9 11.2.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6a11.6 11.6 0 0 0 7.9-11.2A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a class="ghost" href="https://buymeacoffee.com/hubertmk" aria-label="Buy me a coffee"><img class="bmc" src="../bmc.svg" alt="" width="14" height="20"></a>
+      <a class="btn sm" href="../index.html#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM12 4.3 21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.3z"/></svg>Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap doc">
+  <h1>Privacy notes</h1>
+  <p class="lede">Clipiccolo has no account, no upload, no analytics and no server. It converts videos on your computer and never takes anything off it unless you paste a link for it to fetch. These notes say exactly what it reads, writes and downloads.</p>
+  <a class="back" href="../index.html">Back to the start</a>
+
+  <h2>What leaves your computer</h2>
+  <p><b>Nothing, by default.</b> Conversion is done by a bundled copy of ffmpeg that runs as a separate program on your PC. No video, name, size or setting is sent anywhere, and the app never contacts a server of its own; it has none.</p>
+  <p><b>A link you paste</b> is downloaded from that address with Windows’ own <code>curl.exe</code>, saved to your output folder (or Downloads) and converted there. HLS playlists (<code>.m3u8</code>) are read by ffmpeg directly. The site you took the link from sees that download like any other.</p>
+  <p><b>The installer</b> checks for Microsoft’s WebView2 runtime and, on the rare PC without it, downloads it from Microsoft. That is the only time the installer uses the network.</p>
+  <p><b>Downloads of Clipiccolo itself</b> come from GitHub, so GitHub’s terms apply to that page.</p>
+
+  <h2>The clipboard</h2>
+  <p><b>Reading.</b> With Settings → Convert copied videos on (the default), Clipiccolo looks at the clipboard once each time its window comes to the front. It acts only on a copy made since it last looked, and only when that copy is a video file, a file path or an http(s) link that looks like a video. Other text and images are ignored and not kept. Turn the switch off and the clipboard is read only when you press <kbd>Ctrl</kbd>+<kbd>V</kbd> in the window.</p>
+  <p><b>Writing.</b> With Settings → Copy converted videos on (the default), the finished videos are put on the clipboard when a batch is done, the same way Explorer’s Ctrl+C does, so you can paste them anywhere. This replaces whatever was on the clipboard, like any copy. Copy, Copy all and <kbd>Ctrl</kbd>+<kbd>C</kbd> do the same on request.</p>
+
+  <h2>What is stored on your computer</h2>
+  <p><b>The app</b> lives in <code>%LOCALAPPDATA%\Clipiccolo</code> (installer) or <code>%LOCALAPPDATA%\Clipiccolo\&lt;version&gt;</code> (portable exe, unpacked on first start), together with ffmpeg and its license.</p>
+  <p><b>Settings</b> are one file, <code>%APPDATA%\io.github.hubertmk.clipiccolo\settings.json</code>: the chosen preset, the output folder, the two clipboard switches and whether the first-start tip has been shown. Nothing about your videos is recorded in it.</p>
+  <p><b>Converted videos</b> are written next to the original as <code>&lt;name&gt; - piccolo.mp4</code>, or into the folder you chose. Downloaded links are saved in that folder too. While a conversion runs, a temporary file sits in the same place and is removed when it finishes or is cancelled.</p>
+  <p><b>No history, no logs, no cache.</b> The list of videos in the window is gone when you close it.</p>
+
+  <h2>Deleting</h2>
+  <p>Remove Clipiccolo under Settings → Apps, or delete the portable exe and its folder. To remove the settings as well, delete <code>%APPDATA%\io.github.hubertmk.clipiccolo</code>. Converted videos are ordinary files in your folders; they stay until you delete them.</p>
+
+  <h2>This website</h2>
+  <p>This site is static. It sets no cookies, runs no analytics and loads nothing from third parties; the fonts are served from here. The download links lead to GitHub.</p>
+
+  <h2>Questions</h2>
+  <p>Clipiccolo is open source under the MIT license, so everything above can be checked in the <a href="https://github.com/hubertmk/clipiccolo">source on GitHub</a>. Questions and corrections are welcome as an <a href="https://github.com/hubertmk/clipiccolo/issues">issue</a>.</p>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <a href="../index.html" class="lockup" aria-label="Clipiccolo, home"><img class="wm" src="../wordmark.svg" alt="" width="71" height="16"></a>
+    <span>Free and open source, MIT.</span>
+    <nav class="links" aria-label="Footer">
+      <a href="https://github.com/hubertmk/clipiccolo">GitHub</a>
+      <a href="https://buymeacoffee.com/hubertmk">Buy me a coffee</a>
+      <a href="index.html" aria-current="page">Privacy</a>
+      <a href="https://github.com/hubertmk/clipiccolo/blob/main/THIRD-PARTY-NOTICES.md">Third-party licenses</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

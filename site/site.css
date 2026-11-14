@@ -1,0 +1,288 @@
+/* Clipiccolo site. Tokens from brand/tokens.css (light). The family frame of Dettino, Kiesli and VoxFluo:
+   lockup, copy left, one product loop right, then the page walks the round trip and answers the questions
+   a careful person asks before installing. Pistachio #8DB443 is decoration only (the small dot, the progress
+   fill); pistachio text uses #4F6E1E. Numbers are DM Mono with tabular figures (The Receipt Rule). */
+@font-face{font-family:"Bricolage Grotesque";src:url("fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"DM Mono";src:url("fonts/dm-mono-400-latin.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Mono";src:url("fonts/dm-mono-500-latin.woff2") format("woff2");font-weight:500;font-display:swap}
+
+:root{--desk:#F3EDE2;--sheet:#FFFDF9;--sheet-2:#F8F2E8;--sheet-3:#EDE5D8;--ink:#2A1F18;--muted:#6E6157;--faint:#8F8276;--line:rgba(42,31,24,.11);--line-strong:rgba(42,31,24,.22);--crema:#F6EFE3;--pistachio:#8DB443;--pistachio-ink:#4F6E1E;--soft:#E6EDD2;--action-hover:#3D2F25;--caramel:#8F5E12;--caramel-wash:rgba(143,94,18,.11);--mono:"DM Mono",ui-monospace,Consolas,monospace;--ease:cubic-bezier(.16,1,.3,1);box-sizing:border-box;scrollbar-color:var(--line-strong) transparent}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:4.6rem}
+body{margin:0;background:var(--desk);color:var(--ink);font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+::selection{background:var(--soft);color:var(--pistachio-ink)}
+:focus-visible{outline:none;border-radius:4px;box-shadow:0 0 0 2px var(--desk),0 0 0 4px var(--pistachio-ink)}
+.btn:focus-visible{border-radius:7px}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:3px;transition:text-decoration-color .2s}
+a:hover{text-decoration-color:var(--ink)}
+code,kbd,.mono{font-family:var(--mono);font-size:.86em;font-variant-numeric:tabular-nums;font-weight:400}
+code{overflow-wrap:anywhere}
+kbd{border:1px solid var(--line-strong);border-radius:4px;padding:0 .3em;background:var(--sheet)}
+p{margin:0}
+h1,h2,h3{margin:0;text-wrap:balance}
+.wrap{max-width:68rem;margin:0 auto;padding:0 max(2rem,env(safe-area-inset-right,0px)) 0 max(2rem,env(safe-area-inset-left,0px))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-3rem;background:var(--ink);color:var(--crema);padding:.5rem .8rem;border-radius:7px;text-decoration:none;font-weight:600;z-index:10}
+.skip:focus{top:1rem}
+
+/* Header: the lockup, four stops, GitHub and one espresso button. The button steps aside while a section has
+   its own Download button on screen (The Counter Rule: one primary action in reach). */
+header.top{position:sticky;top:0;z-index:5;background:var(--desk);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header.top .wrap{display:flex;align-items:center;gap:1.6rem;height:3.6rem}
+.lockup{display:inline-flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none;flex:none}
+.lockup .tile{width:1.6rem;height:1.6rem;display:block}
+.lockup .wm{height:1.2rem;width:auto;display:block;margin-top:.12rem}
+nav.stops{display:flex;gap:1.4rem;margin-left:.4rem}
+nav.stops a{font-size:.92rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.3rem 0;transition:color .2s}
+nav.stops a:hover{color:var(--ink)}
+nav.stops a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:5px}
+.top .right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+.ghost{display:inline-grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:7px;color:var(--muted);transition:background-color .2s,color .2s}
+.ghost:hover{background:var(--sheet-2);color:var(--ink)}
+.ghost svg{width:1.15rem;height:1.15rem;fill:currentColor}
+.ghost .bmc{height:1.25rem;width:auto;display:block}
+.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:var(--crema);font-weight:600;font-size:1rem;text-decoration:none;border-radius:7px;padding:.68rem 1.15rem .7rem 1rem;line-height:1.2;transition:background-color .2s,opacity .25s,transform .35s var(--ease);white-space:nowrap}
+.btn:hover{background:var(--action-hover)}
+.btn svg{width:1.05rem;height:1.05rem;fill:currentColor;flex:none}
+.btn.sm{font-size:.9rem;padding:.5rem .85rem .52rem .75rem}
+.btn.sm svg{width:.95rem;height:.95rem}
+.top .btn.away{opacity:0;transform:translateY(-.3rem);pointer-events:none}
+.fine{font-family:var(--mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.note{font-size:.86rem;line-height:1.5;color:var(--muted);max-width:34rem}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:3rem;padding-block:4.5rem 5rem}
+.hero>div{min-width:0}
+.hero h1{font-weight:720;font-size:clamp(2.4rem,5.4vw,3.9rem);line-height:1.04;letter-spacing:-.035em;margin:0 0 1.4rem}
+.hero h1 .dot{display:inline-block;width:.15em;height:.15em;border-radius:50%;background:var(--pistachio);margin-left:.05em;vertical-align:0}
+.lede{color:var(--muted);max-width:31rem;font-size:1.1rem}
+.get{margin-top:1.9rem;display:flex;flex-direction:column;align-items:flex-start;gap:.7rem}
+.get .row{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+/* The Mac link stays secondary to the one espresso button: a two-line label, title over a mono spec line. */
+/* Download for Windows / for Mac: the visitor's own system gets the espresso button and goes first, the other the sheet one. */
+.btn[data-for="mac"],html[data-os="mac"] .btn[data-for="win"]{background:var(--sheet);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.btn[data-for="mac"]:hover,html[data-os="mac"] .btn[data-for="win"]:hover{background:var(--sheet-2)}
+html[data-os="mac"] .btn[data-for="mac"]{background:var(--ink);color:var(--crema);box-shadow:none}
+html[data-os="mac"] .btn[data-for="mac"]:hover{background:var(--action-hover)}
+html[data-os="mac"] .get .btn[data-for="mac"]{order:-1}
+.get .note{margin-top:-.2rem}
+
+/* The product loop, "the shot": the clip lands on a basket, pressure builds, and it drains through a thin
+   stream into the small clip below while the receipt counts up to the real size. The scene sits on one vertical
+   line around the zone's centre; every piece is positioned with --x/--y in em so the whole scene scales with the
+   zone's font-size on small screens. Pistachio is only the pressure fill and the saving (The Small Dot Rule). */
+.stage{width:min(24rem,100%);min-width:0;aspect-ratio:1;margin:0 auto;display:grid;place-items:center}
+.zone{position:relative;overflow:hidden;width:100%;height:84%;border:1.5px dashed var(--line-strong);border-radius:10px;background:color-mix(in srgb,var(--sheet) 55%,transparent);font-size:1rem}
+.hint{position:absolute;top:1.2em;left:50%;translate:-50% 0;display:flex;align-items:center;gap:.4em;font-size:.78em;color:var(--muted);white-space:nowrap}
+.hint svg{width:.95em;height:.95em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.el{position:absolute;left:50%;top:50%;translate:calc(-50% + var(--x,0em)) calc(-50% + var(--y,0em))}
+.clip{aspect-ratio:16/9;border-radius:6px;outline:1.5px dashed var(--line-strong);outline-offset:-1.5px}
+.clip .fill{position:absolute;left:0;right:0;bottom:0;height:0;background:var(--ink);border-radius:6px}
+.clip .play{position:absolute;left:50%;top:50%;translate:-50% -50%;width:.9em;height:.9em;fill:var(--crema)}
+.clip.big{--y:-5.2em;width:6.4em}
+.clip.small{--y:2.4em;width:2.6em}
+.basket{--y:-2.4em;width:10em;height:1.6em;background:var(--sheet);border:1px solid var(--line-strong);border-radius:3px 3px 9px 9px;display:flex;align-items:center;gap:.5em;padding:0 .6em}
+.basket .trk{display:block;flex:1;height:4px;border-radius:2px;background:var(--sheet-3);overflow:hidden}
+.basket .prog{display:block;height:100%;width:0;background:var(--pistachio);border-radius:2px}
+.basket .pc{font-family:var(--mono);font-size:.7em;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;min-width:5ch;text-align:right}
+.stream{--y:.035em;width:2px;height:3.27em;background:var(--ink);clip-path:inset(100% 0 0 0)}
+.ro{--y:4.7em;display:grid;gap:.05em;justify-items:center;text-align:center;width:calc(100% - 2em);font-family:var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1.45}
+.ro>span{font-size:.76em;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.ro b{font-weight:500;color:var(--ink)}
+.ro .save{color:var(--pistachio-ink)}
+.toast{position:absolute;bottom:1.2em;left:50%;translate:-50% 0;display:flex;align-items:center;gap:.45em;background:var(--ink);color:var(--crema);border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.18);padding:.45em .85em .47em .7em;font-size:.8em;white-space:nowrap}
+.toast svg{width:.9em;height:.9em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* Sections: hairline above, more air above a heading than below it. */
+section.block{border-top:1px solid var(--line);padding:5rem 0 5.5rem}
+.head{max-width:40rem;margin-bottom:3rem}
+.head h2{font-weight:680;font-size:clamp(1.75rem,3.2vw,2.35rem);line-height:1.12;letter-spacing:-.025em}
+.head p{color:var(--muted);margin-top:.8rem;font-size:1.08rem}
+h3{font-size:1.1rem;font-weight:620;line-height:1.3}
+
+/* The round trip: three stops divided by hairlines, each drawn once. */
+.stops3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.stop{padding:0 2rem 0 0;display:grid;grid-template-rows:auto auto 1fr;gap:.9rem}
+.stop+.stop{border-left:1px solid var(--line);padding-left:2rem}
+.stop:last-child{padding-right:0}
+.stop figure{margin:0 0 .4rem;height:11rem;display:grid;place-items:center}
+.stop figure svg{width:100%;max-width:18rem;height:100%;overflow:visible}
+
+.stop p{color:var(--muted);font-size:1rem}
+.stop p b{color:var(--ink);font-weight:600}
+.draw{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.draw .fill{fill:var(--ink);stroke:none}
+.draw .paper{fill:var(--sheet);stroke:var(--line-strong)}
+.draw .dash{stroke:var(--line-strong);stroke-dasharray:3 3}
+.draw .pist{fill:var(--pistachio);stroke:none}
+.draw .trk{fill:var(--sheet-3);stroke:none}
+.draw .crema{fill:var(--crema);stroke:none}
+.draw .soft{stroke:var(--line-strong)}
+.draw .faint{fill:var(--line);stroke:none}
+.draw text{font-family:var(--mono);font-weight:400;font-variant-numeric:tabular-nums;stroke:none}
+.after{margin-top:3rem;max-width:40rem;color:var(--muted)}
+.after b{color:var(--ink);font-weight:600}
+
+/* Quality: the app's own segmented control over a receipt. Picking a preset lights its column and fills its
+   frame; the frames are drawn to scale (1280 : 1920 : 2560) so the trade-off reads before the numbers do. */
+.presets{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--sheet)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:32rem;table-layout:fixed}
+thead th{padding:1rem 0 0;text-align:left;font-weight:600;vertical-align:bottom}
+thead th:first-child{width:26%;padding-left:.9rem}
+thead th:last-child{padding-right:.9rem}
+.cell{display:block;background:var(--sheet-3);border:1px solid var(--line);padding:3px}
+thead th:nth-child(2) .cell{border-radius:10px 0 0 10px;border-right:0}
+thead th:nth-child(3) .cell{border-left:0;border-right:0}
+thead th:nth-child(4) .cell{border-radius:0 10px 10px 0;border-left:0}
+.seg{display:block;width:100%;font:inherit;border:0;background:transparent;cursor:pointer;border-radius:7px;padding:.5rem .8rem .55rem;text-align:center;font-weight:600;color:var(--muted);line-height:1.2;transition:background-color .25s,color .25s,box-shadow .25s}
+.seg small{display:block;font-weight:400;font-size:.76rem;margin-top:.12rem;color:var(--muted)}
+.seg:hover{color:var(--ink)}
+.seg[aria-pressed="true"]{background:var(--sheet);color:var(--ink);box-shadow:0 1px 2px rgba(42,31,24,.14),0 0 0 1px var(--line);cursor:default}
+.seg:focus-visible{box-shadow:0 0 0 2px var(--pistachio-ink)}
+tbody th{text-align:left;font-weight:400;color:var(--muted);padding:.75rem .9rem;border-top:1px solid var(--line);font-size:.95rem}
+tbody td{padding:.75rem .9rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.9rem;font-variant-numeric:tabular-nums;text-align:center;white-space:nowrap;color:var(--muted);transition:background-color .3s,color .3s}
+tbody tr:first-child th,tbody tr:first-child td{border-top:0;padding-top:1.4rem}
+tbody tr:last-child th,tbody tr:last-child td{padding-bottom:1.1rem}
+#pick[data-pick="1"] tbody td:nth-child(2),#pick[data-pick="2"] tbody td:nth-child(3),#pick[data-pick="3"] tbody td:nth-child(4){background:var(--sheet-2);color:var(--ink);font-weight:500}
+.frames th,.frames td{vertical-align:bottom}
+.frame{position:relative;display:inline-block;vertical-align:bottom;width:calc(var(--k) * min(10rem,100%));aspect-ratio:16/9;border-radius:6px;outline:1.5px dashed var(--line-strong);outline-offset:-1.5px;cursor:pointer;transition:outline-color .3s}
+.frame:hover{outline-color:var(--muted)}
+.frame .fill{position:absolute;inset:0;background:var(--ink);border-radius:6px;clip-path:inset(100% 0 0 0 round 6px);transition:clip-path .6s var(--ease)}
+.frame .play{position:absolute;left:50%;top:50%;translate:-50% -50%;width:calc(.55rem + var(--k) * .75rem);fill:var(--crema);opacity:0;scale:.6;transition:opacity .25s,scale .45s var(--ease)}
+#pick[data-pick="1"] td:nth-child(2) .frame,#pick[data-pick="2"] td:nth-child(3) .frame,#pick[data-pick="3"] td:nth-child(4) .frame{outline-color:transparent;cursor:default}
+#pick[data-pick="1"] td:nth-child(2) .fill,#pick[data-pick="2"] td:nth-child(3) .fill,#pick[data-pick="3"] td:nth-child(4) .fill{clip-path:inset(0 0 0 0 round 6px)}
+#pick[data-pick="1"] td:nth-child(2) .play,#pick[data-pick="2"] td:nth-child(3) .play,#pick[data-pick="3"] td:nth-child(4) .play{opacity:1;scale:1;transition-delay:.3s,.3s}
+tfoot td{padding:.9rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:left;white-space:normal}
+tfoot td b{color:var(--ink);font-weight:600}
+
+/* Two columns of plain sentences, divided by hairlines. */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 4rem}
+.cols h3{padding-bottom:.6rem;border-bottom:1px solid var(--line-strong)}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:.85rem 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:1rem}
+.list li b{color:var(--ink);font-weight:600}
+.list li:last-child{border-bottom:0}
+
+/* Privacy: one statement, then the facts. */
+.priv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:3rem;align-items:start}
+.priv .head{margin-bottom:0}
+.priv .list li{padding:1rem 0}
+.priv .list li:first-child{padding-top:0}
+.priv .more{margin-top:1.6rem;font-size:.95rem;font-weight:500;display:inline-block}
+
+/* The small things */
+.small{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 4rem}
+.small div{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.small div:nth-last-child(-n+2){border-bottom:0}
+.small h3{font-size:1rem}
+.small p{color:var(--muted);font-size:.98rem;margin-top:.2rem}
+
+/* Download: one Windows card with a spec list and the one warning this product has to carry. */
+.dl{background:var(--sheet);border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2.5rem;padding:2rem 2.2rem 2.2rem;align-items:start}
+.dl+.dl{margin-top:1.4rem}
+.dl h3{font-size:1.35rem;font-weight:680;letter-spacing:-.015em}
+.dl .sub{color:var(--muted);margin-top:.3rem}
+.spec{margin:1.6rem 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 1.4rem}
+.spec dt{color:var(--muted);font-size:.92rem;padding:.65rem 0;border-top:1px solid var(--line)}
+.spec dd{margin:0;padding:.65rem 0;border-top:1px solid var(--line);font-size:.95rem}
+.dl .act{display:grid;gap:.9rem;justify-items:start;padding-top:.4rem}
+.dl .act .fine{margin-top:-.3rem}
+.dl .alt{font-size:.95rem;color:var(--muted)}
+.warn{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.6rem;align-items:start;background:var(--caramel-wash);color:var(--caramel);border-radius:10px;padding:.8rem .95rem;font-size:.9rem;line-height:1.5}
+.warn svg{width:1.05rem;height:1.05rem;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-top:.15rem}
+.warn b{font-weight:600}
+
+/* Support: a default (milk sheet) button, so Download stays the one espresso action. */
+.support{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem 4rem;align-items:center}
+.support .head{margin-bottom:0}
+.support .btn{justify-self:start}
+.btn.alt{background:var(--sheet);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.btn.alt:hover{background:var(--sheet-2)}
+.btn.alt img{height:1.25rem;width:auto;display:block}
+
+/* Questions */
+/* Questions: native details, one hairline between each, a chevron that turns when the answer is open. */
+.qa{max-width:44rem}
+.qa details:last-child{border-bottom:1px solid var(--line)}
+.qa details+details{border-top:1px solid var(--line)}
+.qa summary{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.15rem 0;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
+.qa summary::-webkit-details-marker{display:none}
+.qa details:first-child summary{padding-top:.2rem}
+.qa summary::after{content:"";flex:none;width:.5rem;height:.5rem;margin:-.25rem .35rem 0 0;border:solid var(--faint);border-width:0 1.5px 1.5px 0;transform:rotate(45deg);transition:transform .35s var(--ease),border-color .2s}
+.qa summary:hover::after{border-color:var(--ink)}
+.qa details[open]>summary::after{transform:translateY(.3rem) rotate(-135deg)}
+.qa h3{font-size:1.08rem}
+.qa p{color:var(--muted);padding-right:2.5rem}
+.qa p:last-child{padding-bottom:1.35rem}
+.qa p+p{margin-top:.6rem}
+@supports (interpolate-size:allow-keywords){
+  .qa{interpolate-size:allow-keywords}
+  .qa details::details-content{block-size:0;overflow:hidden;transition:block-size .35s var(--ease),content-visibility .35s allow-discrete}
+  .qa details[open]::details-content{block-size:auto}
+}
+
+footer.end{border-top:1px solid var(--line);padding:2rem 0 2.5rem;font-size:.85rem;color:var(--muted)}
+footer.end .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;align-items:center}
+footer.end .wm{height:1rem;width:auto;display:block}
+footer.end .links{display:flex;flex-wrap:wrap;gap:.3rem 1.3rem;margin-left:auto}
+
+/* Privacy page */
+.doc{max-width:44rem;padding-block:3.5rem 5rem}
+.doc h1{font-weight:700;font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.03em}
+.doc .lede{margin-top:1rem;max-width:none}
+.doc h2{font-size:1.3rem;font-weight:650;letter-spacing:-.015em;margin:3rem 0 .9rem;padding-top:2rem;border-top:1px solid var(--line)}
+.doc p{color:var(--muted);margin-top:.7rem}
+.doc p b{color:var(--ink);font-weight:600}
+.doc .back{display:inline-block;margin-top:1.4rem;font-size:.95rem;font-weight:500}
+
+@media (max-width:900px){
+  .stops3{grid-template-columns:minmax(0,1fr)}
+  .stop{padding:0 0 2rem;grid-template-columns:8.5rem minmax(0,1fr);grid-template-rows:auto auto;column-gap:1.5rem;row-gap:.3rem}
+  .stop figure{grid-row:1/3;height:auto;align-self:start;margin:0}
+  .stop h3,.stop p{grid-column:2}
+  .stop+.stop{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:2rem}
+  .dl{grid-template-columns:minmax(0,1fr);gap:1.8rem}
+  .priv{grid-template-columns:minmax(0,1fr);gap:1.5rem}
+}
+@media (max-width:760px){
+  .wrap{padding-left:max(1.25rem,env(safe-area-inset-left,0px));padding-right:max(1.25rem,env(safe-area-inset-right,0px))}
+  html{scroll-padding-top:6.4rem}
+  header.top .wrap{flex-wrap:wrap;height:auto;padding-top:.55rem;padding-bottom:.6rem;row-gap:.25rem;gap:1rem}
+  .top .right{gap:.5rem}
+  nav.stops{order:3;flex-basis:100%;gap:1.1rem;margin:0}
+  nav.stops a{font-size:.88rem;padding:.15rem 0}
+  table{min-width:0}
+  thead th{padding:.7rem 0 0}
+  thead th:first-child{width:24%;padding-left:.5rem}
+  thead th:last-child{padding-right:.5rem}
+  .seg{padding:.4rem .2rem .45rem;font-size:.88rem}
+  .seg small{display:none}
+  tbody th{font-size:.82rem;padding:.6rem .5rem;line-height:1.35}
+  tbody td{font-size:.74rem;padding:.6rem .25rem;white-space:normal}
+  tbody tr:first-child th,tbody tr:first-child td{padding-top:.9rem}
+  tfoot td{font-size:.85rem;padding:.75rem .6rem}
+  .hero{grid-template-columns:minmax(0,1fr);gap:2.5rem;padding-block:2.5rem 3.5rem}
+  .stage{width:min(22rem,100%)}
+  section.block{padding:3.5rem 0 4rem}
+  .head{margin-bottom:2rem}
+  .cols,.small{grid-template-columns:minmax(0,1fr)}
+  .cols>div+div{margin-top:2.2rem}
+  .small div:nth-last-child(2){border-bottom:1px solid var(--line)}
+  .dl{padding:1.4rem 1.3rem 1.5rem}
+  .support{grid-template-columns:minmax(0,1fr)}
+  footer.end .links{margin-left:0}
+}
+@media (max-width:480px){
+  .stop{grid-template-columns:6rem minmax(0,1fr);column-gap:1rem}
+  .draw text,.draw .chip{display:none}
+  .spec{grid-template-columns:minmax(0,1fr)}
+  .spec dt{padding-bottom:0}
+  .spec dd{border-top:0;padding-top:.1rem}
+}
+@media (max-width:420px){
+  .zone{font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.qa summary::after,.qa details::details-content,.seg,tbody td,.frame,.frame .fill,.frame .play{transition:none}
+}

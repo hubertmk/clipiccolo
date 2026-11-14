@@ -1,0 +1,15 @@
+target/
+launcher/payload/*.zst
+launcher/payload/*.sha256
+src-tauri/gen/
+*.exe
+dist/
+__pycache__/
+.cursor/
+.gemini/
+
+# Impeccable per-developer config
+.impeccable/config.local.json
+src-tauri/binaries/
+*.dmg
+.DS_Store

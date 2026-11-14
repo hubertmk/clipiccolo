@@ -1,0 +1,814 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T12:48:53Z",
+  "title": "Design System: Clipiccolo",
+  "extensions": {
+    "colorMeta": {
+      "espresso": {
+        "role": "primary",
+        "displayName": "Espresso",
+        "canonical": "#2A1F18",
+        "oklch": "oklch(25.0% 0.021 54.0)",
+        "tonalRamp": [
+          "#100A06",
+          "#2E221B",
+          "#4B3F37",
+          "#6B5E56",
+          "#8D7F77",
+          "#B0A299",
+          "#D2C7C0",
+          "#F1EDEB"
+        ]
+      },
+      "espresso-hover": {
+        "role": "primary",
+        "displayName": "Espresso Hover",
+        "canonical": "#3D2F25",
+        "oklch": "oklch(31.8% 0.027 57.1)",
+        "tonalRamp": [
+          "#100905",
+          "#2E221A",
+          "#4D3F34",
+          "#6D5E53",
+          "#8F7F73",
+          "#B2A296",
+          "#D2C7BF",
+          "#F2EDEB"
+        ]
+      },
+      "crema": {
+        "role": "primary",
+        "displayName": "Crema",
+        "canonical": "#F6EFE3",
+        "oklch": "oklch(95.4% 0.018 81.3)",
+        "tonalRamp": [
+          "#0F0A04",
+          "#29241B",
+          "#474138",
+          "#666056",
+          "#888177",
+          "#ABA499",
+          "#CFC8BD",
+          "#F5EEE2"
+        ]
+      },
+      "crema-desk": {
+        "role": "neutral",
+        "displayName": "Crema Desk",
+        "canonical": "#F3EDE2",
+        "oklch": "oklch(94.8% 0.016 82.8)",
+        "tonalRamp": [
+          "#0E0B04",
+          "#29241C",
+          "#464139",
+          "#666157",
+          "#878278",
+          "#AAA49A",
+          "#CEC8BE",
+          "#F4EEE3"
+        ]
+      },
+      "milk-sheet": {
+        "role": "neutral",
+        "displayName": "Milk Sheet",
+        "canonical": "#FFFDF9",
+        "oklch": "oklch(99.4% 0.006 84.6)",
+        "tonalRamp": [
+          "#0C0B09",
+          "#262522",
+          "#43423F",
+          "#63615E",
+          "#84827E",
+          "#A7A5A1",
+          "#CBC9C5",
+          "#F0EEEA"
+        ]
+      },
+      "oat-sheet": {
+        "role": "neutral",
+        "displayName": "Oat Sheet",
+        "canonical": "#F8F2E8",
+        "oklch": "oklch(96.3% 0.015 80.7)",
+        "tonalRamp": [
+          "#0E0B05",
+          "#29241D",
+          "#464139",
+          "#666058",
+          "#878279",
+          "#AAA49B",
+          "#CEC8BF",
+          "#F4EEE4"
+        ]
+      },
+      "biscotti": {
+        "role": "neutral",
+        "displayName": "Biscotti",
+        "canonical": "#EDE5D8",
+        "oklch": "oklch(92.5% 0.019 80.1)",
+        "tonalRamp": [
+          "#0F0A03",
+          "#2A241A",
+          "#474136",
+          "#676055",
+          "#898176",
+          "#ABA498",
+          "#D0C8BB",
+          "#F3EEE5"
+        ]
+      },
+      "cocoa-muted": {
+        "role": "neutral",
+        "displayName": "Cocoa Muted",
+        "canonical": "#6E6157",
+        "oklch": "oklch(50.2% 0.023 59.8)",
+        "tonalRamp": [
+          "#0F0A07",
+          "#2C231C",
+          "#4B3F37",
+          "#6B5E54",
+          "#8D8076",
+          "#AEA39A",
+          "#D0C7C1",
+          "#F1EEEC"
+        ]
+      },
+      "cocoa-faint": {
+        "role": "neutral",
+        "displayName": "Cocoa Faint",
+        "canonical": "#8F8276",
+        "oklch": "oklch(61.5% 0.024 65.1)",
+        "tonalRamp": [
+          "#0F0A06",
+          "#2C231B",
+          "#4B4035",
+          "#6B5F53",
+          "#8D8074",
+          "#AEA398",
+          "#D0C7C0",
+          "#F1EEEB"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(42, 31, 24, 0.11)"
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(42, 31, 24, 0.22)"
+      },
+      "pistachio": {
+        "role": "secondary",
+        "displayName": "Pistachio",
+        "canonical": "#8DB443",
+        "oklch": "oklch(71.8% 0.147 126.1)",
+        "tonalRamp": [
+          "#031000",
+          "#132E00",
+          "#2E4D00",
+          "#4C6E00",
+          "#6C9116",
+          "#8EB545",
+          "#B9D58D",
+          "#E9F3DA"
+        ]
+      },
+      "pistachio-ink": {
+        "role": "secondary",
+        "displayName": "Pistachio Ink",
+        "canonical": "#4F6E1E",
+        "oklch": "oklch(49.7% 0.113 128.3)",
+        "tonalRamp": [
+          "#050F00",
+          "#182C00",
+          "#314C00",
+          "#4E6D1D",
+          "#6F8F45",
+          "#94B072",
+          "#BDD1A7",
+          "#EAF2E2"
+        ]
+      },
+      "pistachio-foam": {
+        "role": "secondary",
+        "displayName": "Pistachio Foam",
+        "canonical": "#E6EDD2",
+        "oklch": "oklch(93.4% 0.036 118.9)",
+        "tonalRamp": [
+          "#0A0D00",
+          "#232813",
+          "#40452F",
+          "#5F644D",
+          "#80866D",
+          "#A2A98F",
+          "#C6CDB3",
+          "#ECF2DD"
+        ]
+      },
+      "tomato": {
+        "role": "error",
+        "displayName": "Tomato",
+        "canonical": "#B3361F",
+        "oklch": "oklch(51.6% 0.165 32.6)",
+        "tonalRamp": [
+          "#250000",
+          "#530000",
+          "#810200",
+          "#AB2E16",
+          "#CF5740",
+          "#EC836E",
+          "#FFB4A4",
+          "#FFE7E1"
+        ]
+      },
+      "tomato-wash": {
+        "role": "error",
+        "displayName": "Tomato Wash",
+        "canonical": "rgba(179, 54, 31, 0.09)"
+      },
+      "caramel": {
+        "role": "warning",
+        "displayName": "Caramel",
+        "canonical": "#8F5E12",
+        "oklch": "oklch(52.3% 0.106 71.6)",
+        "tonalRamp": [
+          "#180600",
+          "#3D1B00",
+          "#623600",
+          "#865501",
+          "#A87737",
+          "#C79C68",
+          "#E1C4A0",
+          "#F7EDE0"
+        ]
+      },
+      "caramel-wash": {
+        "role": "warning",
+        "displayName": "Caramel Wash",
+        "canonical": "rgba(143, 94, 18, 0.11)"
+      },
+      "roast-desk": {
+        "role": "neutral",
+        "displayName": "Roast Desk",
+        "canonical": "#17120E",
+        "oklch": "oklch(18.7% 0.011 60.7)",
+        "tonalRamp": [
+          "#0E0A07",
+          "#292420",
+          "#47413C",
+          "#66605B",
+          "#88817C",
+          "#ABA49E",
+          "#CEC8C3",
+          "#F0EEEC"
+        ],
+        "theme": "dark"
+      },
+      "roast-sheet": {
+        "role": "neutral",
+        "displayName": "Roast Sheet",
+        "canonical": "#211A15",
+        "oklch": "oklch(22.4% 0.015 57.4)",
+        "tonalRamp": [
+          "#0F0A07",
+          "#2B231E",
+          "#48403B",
+          "#685F59",
+          "#89807A",
+          "#ACA39C",
+          "#CFC7C2",
+          "#F1EEEC"
+        ],
+        "theme": "dark"
+      },
+      "roast-oat": {
+        "role": "neutral",
+        "displayName": "Roast Oat",
+        "canonical": "#2A221C",
+        "oklch": "oklch(25.9% 0.016 58.8)",
+        "tonalRamp": [
+          "#0F0A07",
+          "#2B231D",
+          "#494039",
+          "#695F58",
+          "#8A8079",
+          "#ADA39B",
+          "#CFC7C2",
+          "#F1EEEC"
+        ],
+        "theme": "dark"
+      },
+      "roast-biscotti": {
+        "role": "neutral",
+        "displayName": "Roast Biscotti",
+        "canonical": "#342A23",
+        "oklch": "oklch(29.4% 0.019 56.9)",
+        "tonalRamp": [
+          "#0F0A07",
+          "#2C231D",
+          "#4A4038",
+          "#6A5F57",
+          "#8C8077",
+          "#AFA29A",
+          "#D0C7C1",
+          "#F1EEEC"
+        ],
+        "theme": "dark"
+      },
+      "roast-ink": {
+        "role": "neutral",
+        "displayName": "Roast Ink",
+        "canonical": "#F3EADF",
+        "oklch": "oklch(94.1% 0.018 73.1)",
+        "tonalRamp": [
+          "#100A04",
+          "#2A241C",
+          "#484138",
+          "#686056",
+          "#898177",
+          "#ACA499",
+          "#D0C8BD",
+          "#F5EDE4"
+        ],
+        "theme": "dark"
+      },
+      "roast-muted": {
+        "role": "neutral",
+        "displayName": "Roast Muted",
+        "canonical": "#B5A797",
+        "oklch": "oklch(73.6% 0.028 71.1)",
+        "tonalRamp": [
+          "#100A04",
+          "#2E2316",
+          "#4C4032",
+          "#6C5F50",
+          "#8D8071",
+          "#B0A393",
+          "#D2C7BC",
+          "#F1EEEA"
+        ],
+        "theme": "dark"
+      },
+      "roast-faint": {
+        "role": "neutral",
+        "displayName": "Roast Faint",
+        "canonical": "#85786B",
+        "oklch": "oklch(58.1% 0.025 67.3)",
+        "tonalRamp": [
+          "#0F0A06",
+          "#2C231B",
+          "#4B4034",
+          "#6B5F52",
+          "#8D8073",
+          "#AEA398",
+          "#D0C8C0",
+          "#F1EEEB"
+        ],
+        "theme": "dark"
+      },
+      "roast-hairline": {
+        "role": "neutral",
+        "displayName": "Roast Hairline",
+        "canonical": "rgba(243, 234, 223, 0.10)",
+        "theme": "dark"
+      },
+      "roast-hairline-strong": {
+        "role": "neutral",
+        "displayName": "Roast Hairline Strong",
+        "canonical": "rgba(243, 234, 223, 0.19)",
+        "theme": "dark"
+      },
+      "roast-pistachio-ink": {
+        "role": "secondary",
+        "displayName": "Roast Pistachio Ink",
+        "canonical": "#B2D46E",
+        "oklch": "oklch(82.3% 0.135 124.5)",
+        "tonalRamp": [
+          "#031000",
+          "#172D00",
+          "#334C00",
+          "#516D00",
+          "#718F25",
+          "#93B34D",
+          "#B7D778",
+          "#E8F4D4"
+        ],
+        "theme": "dark"
+      },
+      "roast-pistachio": {
+        "role": "secondary",
+        "displayName": "Roast Pistachio",
+        "canonical": "#A6CB5E",
+        "oklch": "oklch(79.2% 0.143 125.1)",
+        "tonalRamp": [
+          "#031000",
+          "#152D00",
+          "#314D00",
+          "#4F6E00",
+          "#6F901A",
+          "#90B446",
+          "#B7D77F",
+          "#E8F4D6"
+        ],
+        "theme": "dark"
+      },
+      "roast-tomato": {
+        "role": "error",
+        "displayName": "Roast Tomato",
+        "canonical": "#F07A62",
+        "oklch": "oklch(71.0% 0.150 32.8)",
+        "tonalRamp": [
+          "#270000",
+          "#570000",
+          "#7F0A00",
+          "#A53621",
+          "#CC5A43",
+          "#F27F67",
+          "#FFB19F",
+          "#FFE7E0"
+        ],
+        "theme": "dark"
+      },
+      "roast-caramel": {
+        "role": "warning",
+        "displayName": "Roast Caramel",
+        "canonical": "#E3B341",
+        "oklch": "oklch(79.0% 0.139 85.2)",
+        "tonalRamp": [
+          "#1E0200",
+          "#421800",
+          "#623700",
+          "#845800",
+          "#A87A00",
+          "#CC9D23",
+          "#EBC46D",
+          "#FBEDD1"
+        ],
+        "theme": "dark"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The site headline: one sentence over two lines, ending in a period."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The site subhead in cocoa muted, max 31rem."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The drop zone's title, the largest text in the app."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "The app's base text."
+      },
+      "body-strong": {
+        "displayName": "Body Strong",
+        "purpose": "Row titles, button labels, the toast."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Hints, descriptions, subtitle, tip, footer."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Sizes, percentages, versions: numbers people compare."
+      },
+      "mono-fine": {
+        "displayName": "Mono Fine",
+        "purpose": "Fine print under the site's download button."
+      }
+    },
+    "shadows": [
+      {
+        "name": "toast",
+        "value": "0 4px 16px rgba(0, 0, 0, 0.18)",
+        "purpose": "The toast, the only thing that floats in the app."
+      },
+      {
+        "name": "segment-selected",
+        "value": "0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(42, 31, 24, 0.11)",
+        "purpose": "Contact shadow lifting the chosen quality off its track."
+      },
+      {
+        "name": "loop-card",
+        "value": "0 1px 2px rgba(42, 31, 24, 0.06), 0 14px 28px -18px rgba(42, 31, 24, 0.45)",
+        "purpose": "The floating file card in the site's product loop."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 2px #FFFDF9, 0 0 0 4px #4F6E1E",
+        "purpose": "Keyboard focus on every interactive element (dark: roast sheet gap, roast pistachio ink ring)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "The one curve for every UI transition."
+      },
+      {
+        "name": "duration-ui",
+        "value": "120ms",
+        "purpose": "Hover, border, switch knob."
+      },
+      {
+        "name": "duration-toast",
+        "value": "160ms",
+        "purpose": "Toast fade and 6px rise; it stays 2.6s."
+      },
+      {
+        "name": "duration-layout",
+        "value": "200ms",
+        "purpose": "Drop zone collapsing to a strip, progress width."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "1ms",
+        "purpose": "All animations and transitions under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "site-stack",
+        "value": "760px"
+      },
+      {
+        "name": "app-min-width",
+        "value": "340px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The view's one primary action (Browse in the app, Download on the site).",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Browse…</button>",
+      "css": ".ds-btn { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; height: 32px; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; border-radius: 7px; border: 1px solid var(--border-strong, rgba(42,31,24,.22)); background: var(--surface, #FFFDF9); color: var(--text, #2A1F18); font-size: 13px; font-weight: 600; cursor: pointer; transition: background 120ms cubic-bezier(.2,0,0,1); } .ds-btn:hover { background: var(--surface-2, #F8F2E8); } .ds-btn:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; } .ds-btn:disabled { opacity: .5; cursor: default; } .ds-btn-primary { background: var(--action, #2A1F18); border-color: var(--action, #2A1F18); color: var(--on-action, #F6EFE3); } .ds-btn-primary:hover { background: var(--action-hover, #3D2F25); border-color: var(--action-hover, #3D2F25); }"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Secondary actions: Change…, Copy.",
+      "html": "<button class=\"ds-btn\">Change…</button> <button class=\"ds-btn ds-btn-small\">Copy</button>",
+      "css": ".ds-btn { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; height: 32px; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; border-radius: 7px; border: 1px solid var(--border-strong, rgba(42,31,24,.22)); background: var(--surface, #FFFDF9); color: var(--text, #2A1F18); font-size: 13px; font-weight: 600; cursor: pointer; transition: background 120ms cubic-bezier(.2,0,0,1); } .ds-btn:hover { background: var(--surface-2, #F8F2E8); } .ds-btn:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; } .ds-btn:disabled { opacity: .5; cursor: default; } .ds-btn-small { height: 26px; padding: 0 10px; font-size: 12px; }"
+    },
+    {
+      "name": "Ghost Button and Link",
+      "kind": "button",
+      "refersTo": "button-ghost-hover",
+      "description": "Tertiary row actions (Show, Retry) and footer text links (Copy all).",
+      "html": "<button class=\"ds-btn ds-btn-ghost ds-btn-small\">Show</button> <button class=\"ds-link\">Copy all</button>",
+      "css": ".ds-btn { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; height: 32px; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; border-radius: 7px; border: 1px solid var(--border-strong, rgba(42,31,24,.22)); background: var(--surface, #FFFDF9); color: var(--text, #2A1F18); font-size: 13px; font-weight: 600; cursor: pointer; transition: background 120ms cubic-bezier(.2,0,0,1); } .ds-btn:hover { background: var(--surface-2, #F8F2E8); } .ds-btn:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; } .ds-btn:disabled { opacity: .5; cursor: default; } .ds-btn-ghost { border-color: transparent; background: transparent; } .ds-btn-ghost:hover { background: var(--surface-2, #F8F2E8); } .ds-btn-small { height: 26px; padding: 0 10px; font-size: 12px; } .ds-link { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; border: 0; background: none; padding: 0; font-size: 12px; font-weight: 600; color: var(--action, #2A1F18); cursor: pointer; border-radius: 3px; } .ds-link:hover { text-decoration: underline; } .ds-link:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; }"
+    },
+    {
+      "name": "Drop Zone",
+      "kind": "custom",
+      "refersTo": "drop-zone",
+      "description": "Where videos come in: drop, paste or Browse. Shrinks to a strip once the queue has files; pistachio foam while dragging.",
+      "html": "<div class=\"ds-drop\" tabindex=\"0\"><svg class=\"ds-i ds-big\" viewBox=\"0 0 24 24\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M2 8h20M6 4v4M10 4v4M14 4v4M18 4v4\"/><path d=\"M12 17v-6M9.5 13.5 12 11l2.5 2.5\"/></svg><div class=\"ds-drop-title\">Drop or paste videos</div><div class=\"ds-drop-text\">Any format · saved next to the original</div><button class=\"ds-drop-btn\">Browse…</button></div>",
+      "css": ".ds-drop { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; width: 320px; display: flex; flex-direction: column; align-items: center; gap: 6px; min-height: 176px; justify-content: center; padding: 18px; border: 1.5px dashed var(--border-strong, rgba(42,31,24,.22)); border-radius: 10px; background: var(--surface, #FFFDF9); color: var(--text-2, #6E6157); text-align: center; cursor: pointer; transition: background 120ms cubic-bezier(.2,0,0,1), border-color 120ms cubic-bezier(.2,0,0,1); } .ds-drop:hover { border-color: var(--action, #2A1F18); } .ds-drop:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); } .ds-i { width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none; } .ds-big { width: 28px; height: 28px; color: var(--text, #2A1F18); margin-bottom: 4px; } .ds-drop-title { font-size: 15px; line-height: 20px; font-weight: 600; color: var(--text, #2A1F18); } .ds-drop-text { font-size: 12px; line-height: 16px; } .ds-drop-btn { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; margin-top: 8px; height: 26px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--action, #2A1F18); background: var(--action, #2A1F18); color: var(--on-action, #F6EFE3); font-size: 12px; font-weight: 600; cursor: pointer; } .ds-drop-btn:hover { background: var(--action-hover, #3D2F25); }"
+    },
+    {
+      "name": "Quality Picker",
+      "kind": "input",
+      "refersTo": "segment-selected",
+      "description": "Small, Balanced or Sharp on an oat-sheet track; the hint describes the preset.",
+      "html": "<div class=\"ds-q\"><div class=\"ds-seg\" role=\"radiogroup\" aria-label=\"Quality\"><button role=\"radio\">Small</button><button role=\"radio\" class=\"on\" aria-checked=\"true\">Balanced</button><button role=\"radio\">Sharp</button></div><div class=\"ds-hint\">Up to 1920 px, 30 fps. Good for most screen recordings.</div></div>",
+      "css": ".ds-q { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; width: 320px; display: flex; flex-direction: column; gap: 6px; } .ds-seg { display: flex; padding: 2px; gap: 2px; background: var(--surface-2, #F8F2E8); border: 1px solid var(--border, rgba(42,31,24,.11)); border-radius: 10px; } .ds-seg button { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; flex: 1; height: 28px; border: 0; border-radius: 7px; background: transparent; color: var(--text-2, #6E6157); font-size: 13px; cursor: pointer; } .ds-seg button:hover { color: var(--text, #2A1F18); } .ds-seg button.on { background: var(--surface, #FFFDF9); color: var(--text, #2A1F18); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 0 0 1px var(--border, rgba(42,31,24,.11)); } .ds-seg button:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; } .ds-hint { font-size: 12px; line-height: 16px; color: var(--text-2, #6E6157); padding: 0 2px; }"
+    },
+    {
+      "name": "Queue Row",
+      "kind": "card",
+      "refersTo": "queue-card",
+      "description": "One video per row: done (saving in pistachio ink, Copy and Show) and running (pistachio fill on biscotti, percentage in mono).",
+      "html": "<ul class=\"ds-queue\"><li class=\"ds-item ds-done\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8.5 12 2.5 2.5 4.5-5\"/></svg><div class=\"ds-grow\"><div class=\"ds-name\">sprint-demo.mov</div><div class=\"ds-sub\">48.2 MB → 6.1 MB<b>87 % smaller</b></div></div><button class=\"ds-mini\">Copy</button></li><li class=\"ds-item ds-run\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\"><path d=\"M21 12a9 9 0 1 1-6.22-8.56\"/></svg><div class=\"ds-grow\"><div class=\"ds-name\">bug-repro-4417.mp4</div><div class=\"ds-sub\">Shrinking · 62 %</div><div class=\"ds-bar\"><b></b></div></div></li></ul>",
+      "css": ".ds-queue { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; width: 320px; list-style: none; margin: 0; padding: 0; background: var(--surface, #FFFDF9); border: 1px solid var(--border, rgba(42,31,24,.11)); border-radius: 10px; font-size: 13px; color: var(--text, #2A1F18); } .ds-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--border, rgba(42,31,24,.11)); } .ds-item:first-child { border-top: 0; } .ds-i { width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none; color: var(--text-2, #6E6157); } .ds-done .ds-i, .ds-run .ds-i { color: var(--pistachio-ink, #4F6E1E); } .ds-grow { flex: 1; min-width: 0; } .ds-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-sub { font-family: \"DM Mono\", ui-monospace, Consolas, monospace; font-size: 11.5px; line-height: 16px; color: var(--text-2, #6E6157); margin-top: 2px; font-variant-numeric: tabular-nums; } .ds-sub b { display: block; color: var(--pistachio-ink, #4F6E1E); font-weight: 500; } .ds-bar { height: 4px; margin-top: 6px; border-radius: 99px; background: var(--surface-3, #EDE5D8); overflow: hidden; } .ds-bar b { display: block; height: 100%; width: 62%; background: var(--progress, #8DB443); } .ds-mini { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; height: 26px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--border-strong, rgba(42,31,24,.22)); background: var(--surface, #FFFDF9); color: var(--text, #2A1F18); font-size: 12px; font-weight: 600; cursor: pointer; } .ds-mini:hover { background: var(--surface-2, #F8F2E8); } .ds-mini:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; }"
+    },
+    {
+      "name": "First-start Tip",
+      "kind": "custom",
+      "refersTo": "tip",
+      "description": "Shown once on the very first start, until the first video or dismissal; teaches the clipboard path.",
+      "html": "<div class=\"ds-tip\" role=\"note\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/></svg><span>Copy a video anywhere, then switch here: it shrinks on its own and the small file lands on your clipboard, ready to paste.</span><button class=\"ds-x\" aria-label=\"Dismiss tip\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button></div>",
+      "css": ".ds-tip { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; width: 320px; display: flex; gap: 10px; align-items: flex-start; padding: 10px 6px 10px 14px; border-radius: 10px; background: var(--surface-2, #F8F2E8); color: var(--text-2, #6E6157); font-size: 12px; line-height: 16px; } .ds-i { width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none; } .ds-tip > .ds-i { margin-top: 1px; color: var(--pistachio-ink, #4F6E1E); } .ds-x { flex: none; width: 24px; height: 24px; margin: -4px 0; display: grid; place-items: center; border: 0; border-radius: 7px; background: transparent; color: var(--text-2, #6E6157); cursor: pointer; } .ds-x:hover { background: var(--surface-3, #EDE5D8); color: var(--text, #2A1F18); } .ds-x:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; }"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "A one-line past-tense confirmation above the footer; the app's one Italian word.",
+      "html": "<div class=\"ds-toast\" role=\"status\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\"><rect x=\"8\" y=\"8\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M4 16V5a1 1 0 0 1 1-1h11\"/></svg><span>Fatto. Copied to clipboard.</span></div>",
+      "css": ".ds-toast { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 10px; background: var(--text, #2A1F18); color: var(--bg, #F3EDE2); font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,.18); } .ds-i { width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none; }"
+    },
+    {
+      "name": "Switch",
+      "kind": "input",
+      "refersTo": "switch-on",
+      "description": "Settings toggle: biscotti off, espresso on, crema knob; the whole row is its label.",
+      "html": "<label class=\"ds-row\"><span class=\"ds-grow\"><span class=\"ds-title\">Copy converted videos</span><span class=\"ds-desc\">When a batch is done, the small videos go to the clipboard.</span></span><input type=\"checkbox\" class=\"ds-switch\" checked></label>",
+      "css": ".ds-row { font-family: \"Bricolage Grotesque\", \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif; width: 320px; display: flex; align-items: center; gap: 12px; padding: 11px 14px; background: var(--surface, #FFFDF9); border: 1px solid var(--border, rgba(42,31,24,.11)); border-radius: 10px; color: var(--text, #2A1F18); font-size: 13px; cursor: pointer; } .ds-grow { flex: 1; min-width: 0; } .ds-title { display: block; font-weight: 600; } .ds-desc { display: block; font-size: 12px; line-height: 16px; color: var(--text-2, #6E6157); margin-top: 2px; } .ds-switch { appearance: none; flex: none; position: relative; margin: 0; width: 34px; height: 20px; border-radius: 99px; background: var(--surface-3, #EDE5D8); border: 1px solid var(--border-strong, rgba(42,31,24,.22)); cursor: pointer; transition: background 120ms cubic-bezier(.2,0,0,1); } .ds-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface, #FFFDF9); box-shadow: 0 1px 2px rgba(0,0,0,.25); transition: transform 120ms cubic-bezier(.2,0,0,1); } .ds-switch:checked { background: var(--action, #2A1F18); border-color: var(--action, #2A1F18); } .ds-switch:checked::after { transform: translateX(14px); background: var(--on-action, #F6EFE3); } .ds-switch:focus-visible { box-shadow: 0 0 0 2px var(--surface, #FFFDF9), 0 0 0 4px var(--pistachio-ink, #4F6E1E); outline: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Caffè Piccolo",
+    "overview": "Small, strong, warm, served in seconds. Clipiccolo is built like a good espresso bar on a busy morning: the counter is warm and uncluttered, the order takes seconds, and what you're handed is small, strong and exactly right. Crema paper and espresso ink do almost all the work; pistachio is the one sweet note, kept for the moment something is done.\n\nThe app is a 380 × 520 window used in short bursts between other work, so the warmth lives in materials and details (the paper, the dot, one Italian word) and never in anything that slows the order down. Density is compact and calm: flat sheets on a paper desk, held together by hairlines, with one primary action in reach. The site keeps the same materials at a larger scale and gives the product one quiet moment of motion.\n\nThe system carries one idea from the brand mark, *due punti*: a big thing and its piccolo echo. It lives where it already belongs (the logo's two dots, the drop zone that shrinks to a strip, the site thumbnail that shrinks into its corner) and is not spread as decoration.",
+    "keyCharacteristics": [
+      "Crema paper, espresso ink, one sip of pistachio.",
+      "Flat sheets on paper, held together by hairlines.",
+      "Numbers set like a receipt, in DM Mono.",
+      "Speed is the hospitality: no tours, no waiting screens.",
+      "Things that finish get smaller; they don't vanish.",
+      "",
+      "Colors",
+      "",
+      "roasted, warm-neutral palette with a single green note: espresso, crema and pistachio, and a darker roast for dark mode.",
+      "",
+      "# Primary",
+      "**Espresso** (`espresso`): the ink of everything. Body text, icons that are a control's only label, the primary button fill, checked switches, text links (Copy all, Cancel, Clear list) and the toast. In dark mode its role passes to **Roast Ink** (`roast-ink`), and the primary button inverts to roast ink with an espresso label. Code: `--text`, `--action` in `ui/styles.css`.",
+      "**Espresso Hover** (`espresso-hover`): primary button hover only.",
+      "**Crema** (`crema`): the label on espresso buttons and the big dot of the app icon.",
+      "",
+      "# Secondary",
+      "**Pistachio** (`pistachio`): the small dot of every logo and the progress fill. Decorative only: it fails text contrast on every ground. In dark mode the fill is **Roast Pistachio** (`roast-pistachio`).",
+      "**Pistachio Ink** (`pistachio-ink`): pistachio as text or icon, at 5.9:1 on milk sheet. Used for the success check, the \"87 % smaller\" saving line, the running spinner, the first-start tip icon, the drop-zone hover border and the focus ring. Dark: `roast-pistachio-ink`.",
+      "**Pistachio Foam** (`pistachio-foam`): the drop zone while a file is dragged over it, and the text-selection highlight.",
+      "",
+      "# Neutral",
+      "**Crema Desk** (`crema-desk`): window and page background. Dark: **Roast Desk** (`roast-desk`).",
+      "**Milk Sheet** (`milk-sheet`): cards, the drop zone, the selected segment, default buttons. Dark: `roast-sheet`.",
+      "**Oat Sheet** (`oat-sheet`): the segmented-control track, the first-start tip, status panels and hover. Dark: `roast-oat`.",
+      "**Biscotti** (`biscotti`): the progress track and the unchecked switch. Dark: `roast-biscotti`.",
+      "**Cocoa Muted** (`cocoa-muted`): secondary text (subtitle, hints, descriptions, footer, default icons), 5.1:1 on crema desk. Dark: `roast-muted`.",
+      "**Cocoa Faint** (`cocoa-faint`): placeholders and disabled text only; never the only carrier of information. Dark: `roast-faint`.",
+      "**Hairline** / **Hairline Strong** (`hairline`, `hairline-strong`): row dividers and card borders, then control outlines, the dashed drop-zone border and the window border. Dark: `roast-hairline`, `roast-hairline-strong`.",
+      "**Tomato** with **Tomato Wash** (`tomato`, `tomato-wash`): errors, always with an icon and a sentence; Close turns tomato on hover. **Caramel** with **Caramel Wash** (`caramel`, `caramel-wash`): warnings.",
+      "",
+      "# Named Rules",
+      "The One Sip Rule.** Pistachio covers less than 5% of any screen: progress, success and the small dot. It is never a button, a link, a heading or a fill.",
+      "",
+      "The Small Dot Rule.** Pistachio is only ever the small thing of a pair: the small dot beside the big one, the saving line under the sizes, the fill inside its track. If pistachio is the larger element, the design is wrong.",
+      "",
+      "Typography",
+      "",
+      "Display Font:** Bricolage Grotesque (with Segoe UI, system-ui)",
+      "Body Font:** Bricolage Grotesque (with Segoe UI Variable Text, Segoe UI)",
+      "Label/Mono Font:** DM Mono (with ui-monospace, Consolas)",
+      "",
+      "Character:** One warm grotesk does everything, with optical sizing left on, so 13 px UI text is calm and 62 px headlines get the tight display cut. DM Mono sets the numbers like a receipt. In the app both fonts ship as local woff2 in `ui/fonts/` because the app's content security policy blocks web fonts. The site loads them from Google Fonts.",
+      "",
+      "# Hierarchy",
+      "**Display** (720, clamp 2.4–3.9rem, 1.04, −0.035em): the site headline. One sentence over two lines, ending in a period; the final period may be the pistachio dot.",
+      "**Lede** (400, 1.1rem, 1.6): the site subhead in cocoa muted, max 31rem.",
+      "**Title** (600, 15px / 20px): the drop zone's title, the largest text in the app.",
+      "**Body** (400, 13px / 18px): the app's base. **Body Strong** (600) for row titles, button labels and the toast.",
+      "**Label** (400, 12px / 16px): hints, setting descriptions, the subtitle, the tip and the footer, in cocoa muted.",
+      "**Mono** (400, 11.5px / 16px, tabular figures): file sizes, progress percentages and the version line. **Mono Fine** (0.8rem) for the fine print under the site's download button.",
+      "",
+      "# Named Rules",
+      "The Receipt Rule.** Every number people compare (sizes, percentages, dimensions, frame rates, versions, the footer's \"2 done · 48.2 MB → 6.1 MB\") is DM Mono with tabular figures. Sentences never are.",
+      "",
+      "Layout",
+      "",
+      "e app is one frameless 380 × 520 window (minimum 340 × 440): a custom title bar, then a single column with 16px side padding and 12px between stacked blocks (drop zone, quality picker, tip or status, queue), then a footer with a hairline above it. Queue rows are padded 10 × 12 with 10px gaps; settings rows are 11 × 14 with a 52px minimum height. The queue is the only part that scrolls, with a thin scrollbar in hairline colors.",
+      "",
+      "e site uses the family frame: lockup top left, copy on the left and one product loop on the right in a 1.1fr / 1fr grid with a 3rem gap, stacking to one column below 760px. A one-line footer closes the page.",
+      "",
+      "# Named Rules",
+      "The Counter Rule.** One primary action per view, within reach. In the app that is Browse; on the site it is Download for Windows. If a screen needs two espresso buttons, it is two screens.",
+      "",
+      "Elevation & Depth",
+      "",
+      "at by default. Depth comes from tonal layering (milk sheet on crema desk, oat sheet for insets) and hairlines, not shadows. The frameless window relies on the system shadow plus a 1px hairline-strong border.",
+      "",
+      "# Shadow Vocabulary",
+      "**Toast** (`box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18)`): the toast, the only thing that floats in the app.",
+      "**Selected segment** (`box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 1px` hairline): a contact shadow that lifts the chosen quality off its track.",
+      "**Loop card** (`box-shadow: 0 1px 2px rgba(42, 31, 24, 0.06), 0 14px 28px -18px rgba(42, 31, 24, 0.45)`): the floating file card in the site's product loop.",
+      "",
+      "# Named Rules",
+      "The No Foam Rule.** Flat sheets on paper, hairlines for structure. Nothing floats except the toast and the site's loop card.",
+      "",
+      "Shapes",
+      "",
+      "ntly rounded rectangles: 7px for controls (buttons, icon buttons, segments) and 10px for anything that contains (cards, the drop zone, the tip, status panels, the toast). Fully round shapes are reserved for the brand's dots, switches and progress bars. The app icon is a tile with the family's 23% corner (208 on 896), drawn from `brand/mark.svg`; at 28px in the title bar it has a 6.5px corner and, in dark mode only, a faint 1px crema ring so the espresso tile does not sink into the background. The drop zone's border is a 1.5px dash, the one dashed line in the system, marking where things can be dropped.",
+      "",
+      "Components",
+      "",
+      "rm and quiet: paper-flat, espresso where you act, pistachio only where something is done.",
+      "",
+      "# Buttons",
+      "**Shape:** gently rounded (7px), 32px tall; small buttons are 26px with 10px padding and a 12px label.",
+      "**Primary:** espresso fill, crema label, 600 weight. One per view (Browse). Hover darkens to espresso hover.",
+      "**Default:** milk sheet with a hairline-strong outline and an espresso label (Change…, Copy). Hover fills with oat sheet.",
+      "**Ghost:** no fill or border until hover (Show, Retry, Default).",
+      "**Text link:** espresso, 600, underline on hover (Copy all, Cancel, Clear list).",
+      "**Focus:** a 2px pistachio-ink ring outside a 2px milk-sheet gap, on every interactive element.",
+      "**Disabled:** 50% opacity.",
+      "",
+      "# Inputs / Fields",
+      "**Quality picker:** a three-way segmented control (Small, Balanced, Sharp) on an oat-sheet track with a hairline and 2px inset. The selected segment is milk sheet with an espresso label and a contact shadow; others are cocoa muted. The hint below it describes the preset in words and numbers.",
+      "**Switch:** 34 × 20 pill; biscotti with a hairline-strong border when off, espresso when on, with a crema knob that slides 14px in 120ms.",
+      "",
+      "# Cards / Containers",
+      "**Corner Style:** 10px.",
+      "**Background:** milk sheet on crema desk.",
+      "**Shadow Strategy:** none (see Elevation & Depth).",
+      "**Border:** 1px hairline; rows inside are divided by hairlines, never by gaps.",
+      "**Internal Padding:** 10 × 12 in the queue, 11 × 14 in settings.",
+      "",
+      "# Drop Zone (signature)",
+      "e large target where videos come in: a milk-sheet field with a 1.5px dashed hairline-strong border, 176px tall with an 18px pad, centered icon, title, hint and the Browse button. Once the queue has files it becomes a one-line strip (10 × 12 padding, hint hidden). While a file is dragged over it, the border turns solid pistachio ink on pistachio foam.",
+      "",
+      "# Queue Row",
+      "row per video with a 16px state icon, the name (body strong, ellipsized) and a mono line of sizes. Running rows add a 4px pistachio progress fill on a biscotti track, always with the percentage. Done rows put the saving on its own pistachio-ink line and offer Copy and Show; failed rows show the error sentence in tomato and offer Retry.",
+      "",
+      "# First-start Tip",
+      "own once, on the very first start, until the first video arrives or it is dismissed: an oat-sheet panel with a 10px corner, a pistachio-ink clipboard icon, one sentence in label type, and a 24px dismiss button. It teaches the clipboard path once and never returns.",
+      "",
+      "# Status and Toast",
+      "**Status:** an oat-sheet panel for one ongoing task (pistachio-ink spinner), or a tomato-wash panel for an error (tomato icon). The title says what happened; the text says what to do next and is selectable.",
+      "**Toast:** an espresso card (10px corner) with crema-desk text and the toast shadow, rising 6px into place and fading in over 160ms above the footer, gone after 2.6s. It holds the app's one Italian word: *Fatto. Copied to clipboard.*",
+      "",
+      "# Named Rules",
+      "The Piccolo Echo Rule.** When something completes or collapses, it gets smaller instead of disappearing: the drop zone becomes a strip when work starts, the first-start tip shrinks away (200ms) when dismissed, and the site's thumbnail shrinks into its corner when a clip is done. Prefer shrinking to hiding when a state ends.",
+      "",
+      "# Brand Surfaces",
+      "erything outside the window carries the same materials, generated by `brand/build.py` from one geometry source:",
+      "**Installer:** the NSIS sidebar (164 × 314: crema desk, tile, wordmark, the headline with its pistachio period) and header (150 × 57: the tile on the installer's white band).",
+      "**License page:** `THIRD-PARTY-LICENSES.html` (template `about.hbs`) uses the same tokens in both themes, milk-sheet sections and a pistachio period after its title.",
+      "**Link preview:** `brand/png/social.png` and `site/og.png` (1280 × 640): lockup, headline, fine print in DM Mono, and the mark's two dots on the headline's baseline.",
+      "**README:** the lockup, switching to `lockup-dark.svg` on GitHub's dark theme.",
+      "",
+      "Do's and Don'ts",
+      "",
+      "# Do:",
+      "**Do** use espresso (#2A1F18) for the single primary action and crema (#F6EFE3) for its label.",
+      "**Do** confirm routine actions with a past-tense toast and no color; keep pistachio for finished videos.",
+      "**Do** set every size, percentage and version in DM Mono with tabular figures.",
+      "**Do** draw the brand from `brand/` (run `python brand/build.py`); never redraw the mark or set the wordmark in live type. Change installer art and the link preview in `build.py`, not in the output files.",
+      "**Do** keep both themes in step: every light token has its roast counterpart, and text pairs stay at WCAG AA in both.",
+      "",
+      "# Don't:",
+      "**Don't** use pistachio for buttons, links, headings, backgrounds or any large fill.",
+      "**Don't** draw cups, beans, steam or café scenes. The metaphor lives in materials, never in pictures.",
+      "**Don't** add a loading, welcome or onboarding screen; the drop zone is the welcome and the tip appears once.",
+      "**Don't** scatter dots as bullets or decoration. Dots come as the brand's meaningful pair or not at all.",
+      "**Don't** make buttons round or pill-shaped to echo the dots. Controls stay 7px rectangles.",
+      "**Don't** add shadows to cards, rows or the drop zone."
+    ],
+    "rules": [
+      {
+        "name": "The One Sip Rule",
+        "body": "Pistachio covers less than 5% of any screen: progress, success and the small dot. It is never a button, a link, a heading or a fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Small Dot Rule",
+        "body": "Pistachio is only ever the small thing of a pair: the small dot beside the big one, the saving line under the sizes, the fill inside its track. If pistachio is the larger element, the design is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Receipt Rule",
+        "body": "Every number people compare (sizes, percentages, dimensions, frame rates, versions, the footer's \"2 done · 48.2 MB → 6.1 MB\") is DM Mono with tabular figures. Sentences never are.",
+        "section": "typography"
+      },
+      {
+        "name": "The Counter Rule",
+        "body": "One primary action per view, within reach. In the app that is Browse; on the site it is Download for Windows. If a screen needs two espresso buttons, it is two screens.",
+        "section": "layout"
+      },
+      {
+        "name": "The No Foam Rule",
+        "body": "Flat sheets on paper, hairlines for structure. Nothing floats except the toast and the site's loop card.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Piccolo Echo Rule",
+        "body": "When something completes or collapses, it gets smaller instead of disappearing: the drop zone becomes a strip when work starts, the first-start tip shrinks away (200ms) when dismissed, and the site's thumbnail shrinks into its corner when a clip is done. Prefer shrinking to hiding when a state ends.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** use espresso (#2A1F18) for the single primary action and crema (#F6EFE3) for its label.",
+      "**Do** confirm routine actions with a past-tense toast and no color; keep pistachio for finished videos.",
+      "**Do** set every size, percentage and version in DM Mono with tabular figures.",
+      "**Do** draw the brand from `brand/` (run `python brand/build.py`); never redraw the mark or set the wordmark in live type. Change installer art and the link preview in `build.py`, not in the output files.",
+      "**Do** keep both themes in step: every light token has its roast counterpart, and text pairs stay at WCAG AA in both."
+    ],
+    "donts": [
+      "**Don't** use pistachio for buttons, links, headings, backgrounds or any large fill.",
+      "**Don't** draw cups, beans, steam or café scenes. The metaphor lives in materials, never in pictures.",
+      "**Don't** add a loading, welcome or onboarding screen; the drop zone is the welcome and the tip appears once.",
+      "**Don't** scatter dots as bullets or decoration. Dots come as the brand's meaningful pair or not at all.",
+      "**Don't** make buttons round or pill-shaped to echo the dots. Controls stay 7px rectangles.",
+      "**Don't** add shadows to cards, rows or the drop zone."
+    ]
+  }
+}

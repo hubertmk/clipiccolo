@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: src-tauri
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      # tauri-build checks that bundled resources exist; tests don't need the real ffmpeg.
+      - name: Placeholder ffmpeg.exe
+        shell: pwsh
+        run: New-Item -ItemType File -Force resources/ffmpeg.exe | Out-Null
+      - run: cargo test --locked
+      - run: cargo clippy --locked -- -D warnings
+
+  test-mac:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: src-tauri
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+          targets: aarch64-apple-darwin
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      # tauri-build checks that the ffmpeg sidecar exists; tests don't need the real one.
+      - name: Placeholder ffmpeg sidecar
+        run: mkdir -p binaries && touch binaries/ffmpeg-aarch64-apple-darwin
+      - run: cargo test --locked --target aarch64-apple-darwin
+      - run: cargo clippy --locked --target aarch64-apple-darwin -- -D warnings

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clipiccolo</title>
+<meta name="description" content="Clipiccolo: copy or drop a video and get a small MP4 that still looks right, straight on your clipboard. Free and open source, for Windows and Mac.">
+<meta name="theme-color" content="#F3EDE2">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clipiccolo: big clip in, piccolo clip out">
+<meta property="og:description" content="Copy or drop a video and get one a fraction of the size that still looks right, straight on your clipboard. Free for Windows and Mac.">
+<meta property="og:image" content="/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Clipiccolo: Big clip in. Piccolo clip out. Free, Windows 10/11, open source.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>
+// The visitor's own system gets the espresso Download button; the other system sits beside it.
+document.documentElement.dataset.os=/mac|iphone|ipad/i.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"")?"mac":"win";
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clipiccolo","operatingSystem":"Windows 10, Windows 11, macOS 11","applicationCategory":"MultimediaApplication","description":"Turns any video into a small H.264 MP4 and puts it on the clipboard, ready to paste.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"license":"https://opensource.org/licenses/MIT","downloadUrl":"https://github.com/hubertmk/clipiccolo/releases/latest"}
+</script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="#top" aria-label="Clipiccolo, start of page">
+      <img class="tile" src="icon.svg" alt="" width="26" height="26">
+      <img class="wm" src="wordmark.svg" alt="" width="85" height="19">
+    </a>
+    <nav class="stops" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#quality">Quality</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="right">
+      <a class="ghost" href="https://github.com/hubertmk/clipiccolo" aria-label="Clipiccolo on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.3 9.6 7.9 11.2.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6a11.6 11.6 0 0 0 7.9-11.2A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a class="ghost" href="https://buymeacoffee.com/hubertmk" aria-label="Buy me a coffee"><img class="bmc" src="bmc.svg" alt="" width="14" height="20"></a>
+      <a class="btn sm" id="navdl" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.3-3.3 1.4 1.4L12 16l-5.7-5.7 1.4-1.4L11 12.2zM4 15h2v3h12v-3h2v5H4z"/></svg>Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero">
+    <div>
+      <h1>Big clip in.<br>Piccolo clip out<span class="dot" aria-hidden="true"></span></h1>
+      <p class="lede">Copy a video, switch to Clipiccolo, switch back and paste one a fraction of the size that still looks right. Into Slack, Jira, an email, wherever it was going.</p>
+      <div class="get">
+        <div class="row">
+          <a class="btn" data-for="win" href="https://github.com/hubertmk/clipiccolo/releases/latest" data-primary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM12 4.3 21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.3z"/></svg>Download for Windows</a>
+          <a class="btn" data-for="mac" href="https://github.com/hubertmk/clipiccolo/releases/latest" data-primary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>Download for Mac</a>
+        </div>
+        <span class="fine">Free · open source · Windows 10/11 · macOS 11+ on Apple Silicon · no admin rights</span>
+        <span class="note">The Windows build is not code-signed yet: if Windows says “Windows protected your PC”, choose More info, then Run anyway.</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="stage" aria-hidden="true">
+        <div class="zone" id="zone">
+          <span class="hint"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>Drop or paste videos</span>
+          <!-- The shot. At rest the markup shows the finished state (the small clip, its receipt, the toast);
+               the script runs the loop from there. The big clip, the basket and the stream only appear while it runs. -->
+          <div class="el clip big" id="big" style="opacity:0"><i class="fill"></i><svg class="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></div>
+          <div class="el basket" id="basket" style="opacity:0"><i class="trk"><i class="prog" id="prog" style="width:100%"></i></i><b class="pc" id="pc">100 %</b></div>
+          <i class="el stream" id="stream"></i>
+          <div class="el clip small" id="small"><i class="fill" id="sfill" style="height:100%"></i><svg class="play" id="splay" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></div>
+          <div class="el ro" id="ro">
+            <span class="nm" id="nm">sprint-demo - piccolo.mp4</span>
+            <span class="mt"><span id="in">48.2 MB</span> → <b id="out">6.1 MB</b><span class="save" id="save"> · 87 % smaller</span></span>
+          </div>
+          <span class="toast" id="toast"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg>Fatto. Copied to clipboard.</span>
+        </div>
+      </div>
+      <p class="fine stage-note">Example names and sizes; yours will differ.</p>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="head">
+        <h2>The clipboard, both ways.</h2>
+        <p>Other converters give you a file to go and find. Clipiccolo gives you a paste. The whole trip is copy, switch, paste; everything else has a default that stays out of the way.</p>
+      </div>
+      <div class="stops3">
+        <div class="stop">
+          <figure aria-hidden="true">
+            <svg class="draw" viewBox="0 0 240 150">
+              <rect class="paper" x="75" y="22" width="90" height="112" rx="8"/>
+              <rect class="fill" x="104" y="15" width="32" height="13" rx="3.5"/>
+              <rect class="fill" x="89" y="50" width="62" height="35" rx="4"/>
+              <path class="crema" d="M114 60.5v14l11-7z"/>
+              <text x="120" y="104" text-anchor="middle" font-size="9.5" fill="#6E6157">sprint-demo.mov</text>
+              <text x="120" y="118" text-anchor="middle" font-size="9.5" fill="#2A1F18">48.2 MB</text>
+              <rect class="faint chip" x="180" y="60" width="44" height="16" rx="3"/>
+              <text x="202" y="71.5" text-anchor="middle" font-size="9" fill="#6E6157">Ctrl+C</text>
+            </svg>
+          </figure>
+          <h3>Copy</h3>
+          <p>Copy a video in Explorer, or a link to one. Dropping the file on the window or on the Clipiccolo icon works too, and so does <b>Browse</b>.</p>
+        </div>
+        <div class="stop">
+          <figure aria-hidden="true">
+            <svg class="draw" viewBox="0 0 240 150">
+              <rect class="paper" x="50" y="12" width="140" height="126" rx="8"/>
+              <rect class="fill" x="60" y="20" width="11" height="11" rx="2.5"/>
+              <circle class="crema" cx="64.4" cy="26" r="2.3"/>
+              <circle class="pist" cx="68.6" cy="27.3" r="1"/>
+              <rect class="faint" x="76" y="24" width="30" height="3" rx="1.5"/>
+              <rect class="dash" x="60" y="40" width="120" height="18" rx="4"/>
+              <rect class="faint" x="98" y="47.5" width="44" height="3" rx="1.5"/>
+              <rect class="trk" x="60" y="66" width="120" height="16" rx="6"/>
+              <rect class="paper" x="101" y="68" width="38" height="12" rx="4"/>
+              <rect class="faint" x="70" y="72.5" width="20" height="3" rx="1.5"/>
+              <rect class="fill" x="110" y="72.5" width="20" height="3" rx="1.5"/>
+              <rect class="faint" x="150" y="72.5" width="20" height="3" rx="1.5"/>
+              <rect class="paper" x="60" y="90" width="120" height="40" rx="4"/>
+              <rect class="fill" x="67" y="97" width="22" height="12.5" rx="2.5"/>
+              <rect class="fill" x="95" y="98" width="46" height="3" rx="1.5"/>
+              <rect class="faint" x="95" y="105" width="30" height="3" rx="1.5"/>
+              <text x="173" y="108" text-anchor="end" font-size="9" fill="#2A1F18">57 %</text>
+              <rect class="trk" x="67" y="118" width="106" height="3" rx="1.5"/>
+              <rect class="pist" x="67" y="118" width="60" height="3" rx="1.5"/>
+            </svg>
+          </figure>
+          <h3>Switch</h3>
+          <p>Switch to Clipiccolo. It notices the new copy and starts. Pick <b>Small</b>, <b>Balanced</b> or <b>Sharp</b> if you want to, or leave it.</p>
+        </div>
+        <div class="stop">
+          <figure aria-hidden="true">
+            <svg class="draw" viewBox="0 0 240 150">
+              <rect class="paper" x="75" y="22" width="90" height="112" rx="8"/>
+              <rect class="fill" x="104" y="15" width="32" height="13" rx="3.5"/>
+              <rect class="dash" x="89" y="50" width="62" height="35" rx="4"/>
+              <rect class="fill" x="89" y="65.4" width="34.7" height="19.6" rx="3"/>
+              <path class="crema" d="M103.5 71v8l6.5-4z"/>
+              <text x="120" y="104" text-anchor="middle" font-size="9.5" fill="#6E6157">sprint-demo - piccolo.mp4</text>
+              <text x="120" y="118" text-anchor="middle" font-size="9.5" fill="#2A1F18">6.1 MB</text>
+              <rect class="faint chip" x="180" y="60" width="44" height="16" rx="3"/>
+              <text x="202" y="71.5" text-anchor="middle" font-size="9" fill="#6E6157">Ctrl+V</text>
+            </svg>
+          </figure>
+          <h3>Paste</h3>
+          <p>Switch back and paste. The small MP4 is already on the clipboard, with a toast to say so, and the file sits next to the original as <code>&lt;name&gt; - piccolo.mp4</code>.</p>
+        </div>
+      </div>
+      <p class="after">Several videos queue up and run one after another; <b>Cancel</b> stops the current one. The clipboard part is two switches in Settings, both on by default: <b>Convert copied videos</b> and <b>Copy converted videos</b>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="quality">
+    <div class="wrap">
+      <div class="head">
+        <h2>One decision: how small.</h2>
+        <p>Three presets, and Balanced is on by default. The row shows the real size before and after, so you can see what each one cost.</p>
+      </div>
+      <div class="presets">
+        <table id="pick" data-pick="2">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr">Preset</span></th>
+              <th scope="col"><span class="cell"><button type="button" class="seg" data-col="1" aria-pressed="false">Small<small>for chat and email</small></button></span></th>
+              <th scope="col"><span class="cell"><button type="button" class="seg" data-col="2" aria-pressed="true">Balanced<small>default</small></button></span></th>
+              <th scope="col"><span class="cell"><button type="button" class="seg" data-col="3" aria-pressed="false">Sharp<small>for detail and motion</small></button></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="frames" aria-hidden="true"><th>Frame, to scale</th><td><span class="frame" style="--k:.5"><i class="fill"></i><svg class="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></td><td><span class="frame" style="--k:.75"><i class="fill"></i><svg class="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></td><td><span class="frame" style="--k:1"><i class="fill"></i><svg class="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></td></tr>
+            <tr><th scope="row">Long side, up to</th><td>1280 px</td><td>1920 px</td><td>2560 px</td></tr>
+            <tr><th scope="row">Frame rate, up to</th><td>30 fps</td><td>30 fps</td><td>60 fps</td></tr>
+            <tr><th scope="row">CRF (lower is sharper)</th><td>30</td><td>26</td><td>22</td></tr>
+            <tr><th scope="row">Audio (AAC)</th><td>64 kb/s</td><td>96 kb/s</td><td>128 kb/s</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="4"><b>Never upscales</b>, never raises the frame rate, keeps portrait videos portrait. The result is always H.264 MP4 with faststart, so it plays in a browser straight from wherever it is uploaded.</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="inout">
+    <div class="wrap">
+      <div class="head">
+        <h2>What goes in, what comes out.</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>In</h3>
+          <ul class="list">
+            <li><b>Drop</b> one or more videos on the window, or on the Clipiccolo icon.</li>
+            <li><b>Paste</b> with <kbd>Ctrl</kbd>+<kbd>V</kbd>: files copied in Explorer, paths from Copy as path, or an http(s) link to a video.</li>
+            <li><b>Links</b> are downloaded with the system’s own curl. HLS streams (<code>.m3u8</code>) go straight to ffmpeg.</li>
+            <li><b>Browse</b>, if you prefer a file dialog.</li>
+            <li><b>Any format</b> ffmpeg reads: mov, mp4, mkv, avi, webm, wmv, gif and more.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Out</h3>
+          <ul class="list">
+            <li><b>One small MP4</b> per video, H.264 with faststart, named <code>&lt;name&gt; - piccolo.mp4</code>.</li>
+            <li><b>Next to the original</b>, or in a folder you choose under Settings → Save converted videos.</li>
+            <li><b>On the clipboard</b> when the batch is done, ready for <kbd>Ctrl</kbd>+<kbd>V</kbd> anywhere. Copy, Copy all and <kbd>Ctrl</kbd>+<kbd>C</kbd> work too.</li>
+            <li><b>Dragged out</b> of the list straight into a chat or an email.</li>
+            <li><b>Shown</b> in Explorer with the file selected, with one click.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="privacy">
+    <div class="wrap priv">
+      <div class="head">
+        <h2>Nothing leaves your computer.</h2>
+        <p>Clipiccolo is a converter, not a service. There is no account to make and no server to trust.</p>
+        <a class="more" href="privacy/index.html">Read the privacy notes</a>
+      </div>
+      <ul class="list">
+        <li><b>No account, no upload, no analytics.</b> Your video is converted on your PC by a bundled copy of ffmpeg, which runs as a separate program.</li>
+        <li><b>The only network use is the one you ask for.</b> A pasted link is downloaded from that address. The installer fetches Microsoft’s WebView2 runtime if your Windows lacks it.</li>
+        <li><b>The clipboard is read when you switch to Clipiccolo</b>, only for copies made since it last looked, and only for things that look like a video file, a path or a link. Other text is ignored. Turn Convert copied videos off and it never looks.</li>
+        <li><b>Settings stay on your disk</b>, in <code>%APPDATA%\io.github.hubertmk.clipiccolo\settings.json</code>. Nothing is stored anywhere else.</li>
+        <li><b>Open source under the MIT license.</b> Read it, or build it yourself.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="more">
+    <div class="wrap">
+      <div class="head">
+        <h2>And the small things.</h2>
+      </div>
+      <div class="small">
+        <div><h3>Queue</h3><p>Drop several videos at once; they run one after another. Cancel stops the current one.</p></div>
+        <div><h3>Your folder</h3><p>Settings → Save converted videos puts every small MP4 in one place. The default is next to the original.</p></div>
+        <div><h3>Show</h3><p>Opens Explorer or Finder with the small file selected.</p></div>
+        <div><h3>Light and dark</h3><p>Follows your system theme, on Windows and on the Mac.</p></div>
+        <div><h3>Portable</h3><p><code>Clipiccolo.exe</code> on the releases page is one file with no install. It unpacks once into <code>%LOCALAPPDATA%\Clipiccolo</code> (about 100 MB); later starts are instant.</p></div>
+        <div><h3>For IT</h3><p><code>Clipiccolo-Setup-&lt;version&gt;.exe /S</code> installs silently, per user, with no admin rights.</p></div>
+        <div><h3>Two switches</h3><p>Convert copied videos and Copy converted videos, both on by default. Turn either off in Settings.</p></div>
+        <div><h3>Honest numbers</h3><p>Every row shows the real size before and after. Nothing is promised that the encoder did not deliver.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="download">
+    <div class="wrap">
+      <div class="head">
+        <h2>Download for Windows or Mac.</h2>
+        <p>Windows 10 and 11, and macOS on Apple Silicon. No prerequisites, nothing to sign up for.</p>
+      </div>
+      <div class="dl">
+        <div>
+          <h3>Windows</h3>
+          <p class="sub">Windows 10 or 11, 64-bit</p>
+          <dl class="spec">
+            <dt>Installer</dt><dd><code>Clipiccolo-Setup-&lt;version&gt;.exe</code>, about <span class="mono">28 MB</span></dd>
+            <dt>Install</dt><dd>Per user, into <code>%LOCALAPPDATA%\Clipiccolo</code>. No admin rights.</dd>
+            <dt>Needs</dt><dd>Microsoft’s WebView2 runtime, installed for you if it is missing.</dd>
+            <dt>Remove</dt><dd>Settings → Apps, like any other app.</dd>
+            <dt>Also</dt><dd>A portable <code>Clipiccolo.exe</code>: one file, no install.</dd>
+          </dl>
+        </div>
+        <div class="act">
+          <a class="btn" data-for="win" href="https://github.com/hubertmk/clipiccolo/releases/latest" data-primary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM12 4.3 21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.3z"/></svg>Download for Windows</a>
+          <span class="fine">Free · open source (MIT)</span>
+          <p class="alt">Every version and the portable exe are on the <a href="https://github.com/hubertmk/clipiccolo/releases">releases page</a>.</p>
+          <div class="warn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18.1A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.9L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><span><b>Not code-signed yet.</b> Windows will say “Windows protected your PC” the first time. Choose More info, then Run anyway.</span></div>
+        </div>
+      </div>
+      <div class="dl">
+        <div>
+          <h3>Mac</h3>
+          <p class="sub">macOS 11 or newer, Apple Silicon (M1 and later)</p>
+          <dl class="spec">
+            <dt>Disk image</dt><dd><code>Clipiccolo-&lt;version&gt;-mac-arm64.dmg</code></dd>
+            <dt>Install</dt><dd>Drag Clipiccolo into Applications. ffmpeg is inside the app.</dd>
+            <dt>Signed</dt><dd>With the author’s Apple Developer ID, so macOS opens it like any other app.</dd>
+            <dt>Clipboard</dt><dd>macOS asks once whether Clipiccolo may read what you copied. Allow it; that is the whole trick.</dd>
+            <dt>Remove</dt><dd>Move the app to the Bin.</dd>
+            <dt>Not yet</dt><dd>Intel Macs.</dd>
+          </dl>
+        </div>
+        <div class="act">
+          <a class="btn" data-for="mac" href="https://github.com/hubertmk/clipiccolo/releases/latest" data-primary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>Download for Mac</a>
+          <span class="fine">Free · open source (MIT)</span>
+          <p class="alt">The disk image sits on the same <a href="https://github.com/hubertmk/clipiccolo/releases">releases page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <h2>Questions.</h2>
+      </div>
+      <div class="qa">
+        <details>
+          <summary><h3>Does my video get uploaded anywhere?</h3></summary>
+          <p>No. Conversion runs on your computer with the bundled ffmpeg. The only network use is downloading a link you pasted, and the Windows installer fetching WebView2 if Windows lacks it.</p>
+        </details>
+        <details>
+          <summary><h3>Why does Windows warn me when I run the installer?</h3></summary>
+          <p>Clipiccolo is not code-signed yet, so SmartScreen shows “Windows protected your PC” the first time. Choose More info, then Run anyway. The source is open if you would rather read it or build it yourself.</p>
+        </details>
+        <details>
+          <summary><h3>How small does it get?</h3></summary>
+          <p>It depends on the video. Screen recordings and phone videos usually shrink a lot; a video that was already compressed well shrinks less. The row shows the real numbers when it is done, and the sizes in the demo above are examples, not measurements.</p>
+        </details>
+        <details>
+          <summary><h3>Will it look worse?</h3></summary>
+          <p>Smaller means some loss, and the presets trade it off differently. Balanced is tuned for a screen recording or a phone video you watch on a screen; Sharp keeps more detail and up to 60 fps; Small is for when size matters most. None of them upscales or raises the frame rate.</p>
+        </details>
+        <details>
+          <summary><h3>Which formats work?</h3></summary>
+          <p>In: anything ffmpeg reads, so mov, mp4, mkv, avi, webm, wmv, gif and most things a phone, a screen recorder or a camera produces. Out: always an H.264 MP4 with faststart, which plays in every browser and chat app.</p>
+        </details>
+        <details>
+          <summary><h3>Where does the small file go?</h3></summary>
+          <p>Next to the original as <code>&lt;name&gt; - piccolo.mp4</code>, or in the folder you set under Settings → Save converted videos. Show opens Explorer or Finder with it selected.</p>
+        </details>
+        <details>
+          <summary><h3>Can I use it at work?</h3></summary>
+          <p>Yes. Clipiccolo is MIT-licensed, needs no account and no admin rights, and installs silently with <code>/S</code>. It bundles ffmpeg, which is GPL v3 and runs as a separate program; the <a href="https://github.com/hubertmk/clipiccolo/blob/main/THIRD-PARTY-NOTICES.md">third-party notices</a> list everything.</p>
+        </details>
+        <details>
+          <summary><h3>I had Clip Shrinker. What now?</h3></summary>
+          <p>Clipiccolo is the same app with its new name. Uninstall Clip Shrinker under Settings → Apps first, since Windows treats Clipiccolo as a new app; your settings carry over on the first start.</p>
+        </details>
+        <details>
+          <summary><h3>Mac or Linux?</h3></summary>
+          <p>Mac, yes: Clipiccolo ships for macOS 11 and newer on Apple Silicon, with the same clipboard tricks (⌘V in, ⌘C and drag out). Intel Macs and Linux are not covered. If you would use it there, say so in an <a href="https://github.com/hubertmk/clipiccolo/issues">issue on GitHub</a>.</p>
+        </details>
+        <details>
+          <summary><h3>Why “Clipiccolo”?</h3></summary>
+          <p>A clip, and piccolo, Italian for small. A big clip goes in and a piccolo one comes out; the two dots in the logo are that pair.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="support">
+    <div class="wrap support">
+      <div class="head">
+        <h2>Free, and staying free.</h2>
+        <p>Clipiccolo is free and open source, with no account, no upsell and no plan to add one. If it saved you a few minutes, a coffee says thanks and helps keep it going. Grazie.</p>
+      </div>
+      <a class="btn alt" href="https://buymeacoffee.com/hubertmk"><img src="bmc.svg" alt="" width="14" height="20">Buy me a coffee</a>
+    </div>
+  </section>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <a href="#top" class="lockup" aria-label="Clipiccolo, back to top"><img class="wm" src="wordmark.svg" alt="" width="71" height="16"></a>
+    <span>Free and open source, MIT.</span>
+    <nav class="links" aria-label="Footer">
+      <a href="https://github.com/hubertmk/clipiccolo">GitHub</a>
+      <a href="https://buymeacoffee.com/hubertmk">Buy me a coffee</a>
+      <a href="privacy/index.html">Privacy</a>
+      <a href="https://github.com/hubertmk/clipiccolo/blob/main/THIRD-PARTY-NOTICES.md">Third-party licenses</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// The header's Download button steps aside while a section's own Download button is on screen.
+(function(){
+  var nav=document.getElementById('navdl'),cta=document.querySelectorAll('[data-primary]');
+  if(!('IntersectionObserver' in window)||!cta.length)return;
+  var seen=new Set(),io=new IntersectionObserver(function(es){
+    es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});
+    nav.classList.toggle('away',seen.size>0);
+  },{rootMargin:'-56px 0px 0px 0px'});
+  cta.forEach(function(el){io.observe(el)});
+})();
+
+// Quality: the segments work like the app's. Picking one lights its column and fills its frame.
+(function(){
+  var t=document.getElementById('pick');if(!t)return;
+  var segs=t.querySelectorAll('.seg');
+  segs.forEach(function(b){b.addEventListener('click',function(){
+    t.setAttribute('data-pick',b.getAttribute('data-col'));
+    segs.forEach(function(s){s.setAttribute('aria-pressed',s===b?'true':'false')});
+  })});
+  t.querySelectorAll('.frame').forEach(function(f,i){f.addEventListener('click',function(){segs[i].click()})});
+})();
+
+// The shot, one clip per round (8.5 s): the clip lands on the basket, pressure builds to a quarter, then it
+// drains through a thin stream while the small clip fills below and its size counts up to the real number.
+// The empty outline and the basket fade, the toast appears, and the next clip follows. Timing is one set of
+// Web Animations driven off the same clock, so a scrub or a pause keeps every part in step.
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||typeof Element.prototype.animate!=='function')return;
+  var $=function(id){return document.getElementById(id)};
+  var zone=$('zone'),big=$('big'),basket=$('basket'),prog=$('prog'),pc=$('pc'),stream=$('stream'),small=$('small'),
+      sfill=$('sfill'),splay=$('splay'),ro=$('ro'),nm=$('nm'),inEl=$('in'),out=$('out'),save=$('save'),toast=$('toast');
+  var clips=[
+    ['sprint-demo','mov',1920,1080,48.2,6.1],
+    ['bug-repro-4417','mkv',2560,1440,112.7,11.4],
+    ['onboarding-walkthrough','mp4',1920,1080,86.3,9.8],
+    ['IMG_2231','mov',1080,1920,64.9,7.2]
+  ],n=0,cur=clips[0],DUR=8500,anims=[];
+  var OUT='cubic-bezier(.16,1,.3,1)',IN='cubic-bezier(.4,0,1,1)',FLOW='cubic-bezier(.4,0,.6,1)';
+  function A(el,frames){var a=el.animate(frames,{duration:DUR,fill:'both'});anims.push(a);return a}
+  function ez(u){return u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2}
+  function eo(u){return 1-Math.pow(1-u,3)}
+  function seg(t,a,b){return Math.max(0,Math.min(1,(t-a)/(b-a)))}
+  function mb(v){return v.toFixed(1)+' MB'}
+
+  var master=A(big,[{offset:0,opacity:0,transform:'translateY(-3em)'},{offset:.02,opacity:0,transform:'translateY(-3em)',easing:OUT},
+    {offset:.12,opacity:1,transform:'translateY(0)'},{offset:.72,opacity:1},{offset:.80,opacity:0},{offset:1,opacity:0,transform:'translateY(0)'}]);
+  A(big.firstElementChild,[{offset:0,height:'100%'},{offset:.36,height:'100%',easing:FLOW},{offset:.64,height:'0%'},{offset:1,height:'0%'}]);
+  A(big.lastElementChild,[{offset:0,opacity:1},{offset:.36,opacity:1},{offset:.44,opacity:0},{offset:1,opacity:0}]);
+  A(basket,[{offset:0,opacity:0},{offset:.04,opacity:0},{offset:.12,opacity:1},{offset:.72,opacity:1},{offset:.80,opacity:0},{offset:1,opacity:0}]);
+  A(prog,[{offset:0,width:'0%'},{offset:.26,width:'0%',easing:OUT},{offset:.34,width:'25%',easing:FLOW},{offset:.64,width:'100%'},{offset:1,width:'100%'}]);
+  A(stream,[{offset:0,clipPath:'inset(100% 0 0 0)'},{offset:.34,clipPath:'inset(100% 0 0 0)',easing:OUT},{offset:.40,clipPath:'inset(0% 0 0 0)'},
+    {offset:.64,clipPath:'inset(0% 0 0 0)',easing:IN},{offset:.70,clipPath:'inset(100% 0 0 0)'},{offset:1,clipPath:'inset(100% 0 0 0)'}]);
+  var FADE=[{offset:0,opacity:1},{offset:.92,opacity:1},{offset:.97,opacity:0},{offset:1,opacity:0}];
+  A(small,FADE);
+  A(sfill,[{offset:0,height:'0%'},{offset:.36,height:'0%',easing:FLOW},{offset:.64,height:'100%'},{offset:1,height:'100%'}]);
+  A(splay,[{offset:0,opacity:0},{offset:.66,opacity:0},{offset:.72,opacity:1},{offset:1,opacity:1}]);
+  A(ro,[{offset:0,opacity:0},{offset:.30,opacity:0},{offset:.36,opacity:1},{offset:.92,opacity:1},{offset:.97,opacity:0},{offset:1,opacity:0}]);
+  A(nm,[{offset:0,opacity:0},{offset:.66,opacity:0},{offset:.72,opacity:1},{offset:1,opacity:1}]);
+  A(save,[{offset:0,opacity:0},{offset:.68,opacity:0},{offset:.74,opacity:1},{offset:1,opacity:1}]);
+  A(toast,[{offset:0,opacity:0,transform:'translateY(.45em)'},{offset:.76,opacity:0,transform:'translateY(.45em)',easing:OUT},{offset:.82,opacity:1,transform:'translateY(0)'},
+    {offset:.92,opacity:1,transform:'translateY(0)'},{offset:.97,opacity:0,transform:'translateY(.2em)'},{offset:1,opacity:0,transform:'translateY(.2em)'}]);
+
+  function set(c){cur=c;nm.textContent=c[0]+' - piccolo.mp4';inEl.textContent=mb(c[4]);save.textContent=' · '+Math.round(100-100*c[5]/c[4])+' % smaller'}
+  function frame(){
+    var t=(master.currentTime||0)/DUR;
+    out.textContent=mb(cur[5]*ez(seg(t,.36,.64)));
+    pc.textContent=Math.round(25*eo(seg(t,.26,.34))+75*ez(seg(t,.34,.64)))+' %';
+    requestAnimationFrame(frame);
+  }
+  function round(){set(clips[n++%clips.length]);anims.forEach(function(a){a.currentTime=0;a.play()})}
+  master.onfinish=round;
+  // Start on the finished frame the markup already shows, let it fade, then loop from the first clip.
+  set(clips[0]);n=1;anims.forEach(function(a){a.currentTime=DUR*.84;a.play()});
+  requestAnimationFrame(frame);
+  // The loop rests while the stage is off screen.
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){es.forEach(function(e){
+    anims.forEach(function(a){if(e.isIntersecting){if(a.playState==='paused')a.play()}else if(a.playState==='running')a.pause()});
+  })}).observe(zone);
+})();
+</script>
+</body>
+</html>

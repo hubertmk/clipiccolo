@@ -1,0 +1,106 @@
+/* Clipiccolo design tokens ("Due punti"). The single source for the app (ui/styles.css),
+   the site (site/index.html) and the design-system reference.
+
+   Paper, sheet, ink, one accent, like Dettino, Kiesli and VoxFluo; Clipiccolo's accent is
+   pistachio on espresso instead of the family's blues. Pistachio #8DB443 is decorative only
+   (the small dot, progress fills); text and icons in pistachio use --pistachio-ink (AA).
+   Every text/surface pair below meets WCAG AA in both themes. */
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage-grotesque-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("fonts/dm-mono-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("fonts/dm-mono-500-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  /* brand constants (same in both themes) */
+  --espresso: #2A1F18;
+  --crema: #F6EFE3;
+  --pistachio: #8DB443;
+
+  /* surfaces */
+  --desk: #F3EDE2;          /* window / page background (crema) */
+  --sheet: #FFFDF9;         /* cards, drop zone, inputs */
+  --sheet-2: #F8F2E8;       /* inset rows, hover */
+  --sheet-3: #EDE5D8;       /* segmented-control track, pressed */
+  --line: rgba(42, 31, 24, 0.11);
+  --line-strong: rgba(42, 31, 24, 0.22);
+
+  /* text */
+  --ink: #2A1F18;           /* 14.9:1 on desk */
+  --ink-2: #6E6157;         /* 5.1:1 on desk */
+  --ink-3: #8F8276;         /* placeholders, disabled; not for body text */
+
+  /* action: espresso button, crema label */
+  --action: #2A1F18;
+  --action-hover: #3D2F25;
+  --on-action: #F6EFE3;
+
+  /* accent: pistachio */
+  --pistachio-ink: #4F6E1E; /* 5.9:1 on sheet: links, success, icons */
+  --pistachio-soft: #E6EDD2;
+  --progress: #8DB443;
+
+  /* status */
+  --danger: #B3361F;
+  --danger-soft: rgba(179, 54, 31, 0.09);
+  --warning: #8F5E12;
+  --warning-soft: rgba(143, 94, 18, 0.11);
+
+  /* type */
+  --font-ui: "Bricolage Grotesque", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, Consolas, monospace;
+  --wordmark-weight: 700;
+  --tracking-display: -0.035em;
+
+  /* shape and motion */
+  --r-ctl: 7px;
+  --r-card: 10px;
+  --r-tile: 23%;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --focus: 0 0 0 2px var(--sheet), 0 0 0 4px var(--pistachio-ink);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --desk: #17120E;
+    --sheet: #211A15;
+    --sheet-2: #2A221C;
+    --sheet-3: #342A23;
+    --line: rgba(243, 234, 223, 0.10);
+    --line-strong: rgba(243, 234, 223, 0.19);
+
+    --ink: #F3EADF;
+    --ink-2: #B5A797;
+    --ink-3: #85786B;
+
+    --action: #F3EADF;
+    --action-hover: #FFFFFF;
+    --on-action: #2A1F18;
+
+    --pistachio-ink: #B2D46E;
+    --pistachio-soft: rgba(166, 203, 94, 0.14);
+    --progress: #A6CB5E;
+
+    --danger: #F07A62;
+    --danger-soft: rgba(240, 122, 98, 0.12);
+    --warning: #E3B341;
+    --warning-soft: rgba(227, 179, 65, 0.13);
+    color-scheme: dark;
+  }
+}

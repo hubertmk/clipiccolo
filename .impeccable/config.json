@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-13T21:21:46.784Z",
+        "reason": "PRODUCT.md Brand Commitments: the crema/espresso 'Due punti' identity was chosen by the user on 2026-11-13 and is binding"
+      }
+    ]
+  }
+}
