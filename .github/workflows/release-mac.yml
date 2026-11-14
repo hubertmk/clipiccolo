@@ -50,8 +50,36 @@ jobs:
         run: |
           [ -n "$P8" ] && [ -n "$APPLE_API_KEY" ] && [ -n "$APPLE_API_ISSUER" ] \
             || { echo "Notarization secrets missing (see docs/mac-release-github.md)"; exit 1; }
-          printf '%s\n' "$P8" > "$RUNNER_TEMP/AuthKey.p8"
+          # notarytool's PEM parser is strict (header/footer, 64-column lines). Rebuild a canonical PEM from whatever
+          # was pasted: the .p8 as-is, CRLF, a single line, literal "\n", body only, or the whole file base64-encoded.
+          python3 - "$RUNNER_TEMP/AuthKey.p8" <<'PY'
+          import base64, binascii, os, re, sys, textwrap
+          s = os.environ["P8"].replace("\\n", "\n")
+          if "PRIVATE KEY" not in s:
+              try:
+                  d = base64.b64decode("".join(s.split()), validate=True).decode()
+                  if "PRIVATE KEY" in d:
+                      s = d
+              except (binascii.Error, UnicodeDecodeError):
+                  pass
+          body = "".join(re.sub(r"-----[A-Z ]+-----", "", s).split())
+          try:
+              der = base64.b64decode(body, validate=True)
+          except binascii.Error:
+              sys.exit("APPLE_API_KEY_P8 is not a .p8 key; set it with: gh secret set APPLE_API_KEY_P8 < AuthKey_<KEYID>.p8")
+          lines = "\n".join(textwrap.wrap(base64.b64encode(der).decode(), 64))
+          with open(sys.argv[1], "w") as f:
+              f.write(f"-----BEGIN PRIVATE KEY-----\n{lines}\n-----END PRIVATE KEY-----\n")
+          PY
+          openssl pkey -in "$RUNNER_TEMP/AuthKey.p8" -noout \
+            || { echo "APPLE_API_KEY_P8 does not contain a valid private key (see docs/mac-release-github.md)"; exit 1; }
           echo "APPLE_API_KEY_PATH=$RUNNER_TEMP/AuthKey.p8" >> "$GITHUB_ENV"
+
+      # Fail in seconds rather than after the 20-minute build if the key, Key ID or Issuer ID is wrong.
+      - name: Check notarization credentials
+        run: |
+          xcrun notarytool history --key "$APPLE_API_KEY_PATH" --key-id "$APPLE_API_KEY" \
+            --issuer "$APPLE_API_ISSUER" >/dev/null
 
       # Tauri imports APPLE_CERTIFICATE into a temporary keychain, signs, then notarizes and staples the app.
       - name: Build, sign and notarize the app
